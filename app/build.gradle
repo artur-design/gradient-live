@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 35
+
+    defaultConfig {
+        applicationId "com.example.gradient"
+        minSdkVersion 14
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+implementation 'net.objecthunter:exp4j:0.4.8'
+
+    // Добавьте другие зависимости, если необходимо
+}

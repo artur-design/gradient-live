@@ -1,0 +1,2 @@
+NAME=gradient
+FROM_GRADLE=TRUE

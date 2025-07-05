@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <PreferenceCategory android:title="Настройки градиента">
+    <ListPreference
+        android:key="screenRefreshRate"
+        android:title="Частота объявления"
+        android:summary="Текущая частота: "
+        android:dialogTitle="Частота объявления"
+        android:entries="@array/refresh_rate_entries"
+        android:entryValues="@array/refresh_rate_values" />
+
+    <EditTextPreference
+        android:key="frameCount"
+        android:title="Количество кадров"
+        android:summary="Текущее количество кадров: "
+        android:inputType="number" />
+
+<EditTextPreference
+    android:key="gradientLengthCoefficient"
+    android:title="Коэффициент длины градиента"
+    android:summary="Введите значение от 1 до 5"
+    android:inputType="numberDecimal" />
+
+
+    <Preference
+        android:key="movementDirection"
+        android:title="Направление движения"
+        android:summary="Выберите направление" />
+
+    <Preference
+        android:key="colorGenerationRuless"
+        android:title="Правила генерации цвета"
+        android:summary="Настройте правила для генерации цвета" />
+</PreferenceCategory>
+    <PreferenceCategory android:title="Экономия батареи">
+    <CheckBoxPreference
+        android:key="blackWallpaper"
+        android:title="Чёрные обои"
+        android:summary="Включить черные обои" />
+</PreferenceCategory>
+    <PreferenceCategory android:title="О приложении">
+<Preference
+    android:key="howToUse"
+    android:title="Как пользоваться"
+    android:summary="Нажмите, чтобы узнать, как пользоваться приложением." />
+</PreferenceCategory>
+
+
+</PreferenceScreen>
