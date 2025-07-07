@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 35
+    compileSdkVersion 27 // Установите на 27
+    buildToolsVersion "27.0.3" // Укажите версию инструментов сборки
 
     defaultConfig {
         applicationId "com.example.gradient"
         minSdkVersion 14
-        targetSdkVersion 35
+        targetSdkVersion 27 // Установите на 27
         versionCode 1
         versionName "1.0"
     }
@@ -20,8 +21,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1' // Оставьте эту зависимость
     compile 'net.objecthunter:exp4j:0.4.8'
 
     // Добавьте другие зависимости, если необходимо
 }
+
