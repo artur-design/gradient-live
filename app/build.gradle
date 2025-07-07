@@ -20,8 +20,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-implementation 'net.objecthunter:exp4j:0.4.8'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'net.objecthunter:exp4j:0.4.8'
 
     // Добавьте другие зависимости, если необходимо
 }
