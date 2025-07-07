@@ -20,6 +20,15 @@ jobs:
         distribution: 'temurin'
         java-version: 8
 
+    - name: Install Android SDK
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip
+        mkdir -p $HOME/Android/Sdk/cmdline-tools
+        unzip commandlinetools-linux-6609375_latest.zip -d $HOME/Android/Sdk/cmdline-tools
+        yes | $HOME/Android/Sdk/cmdline-tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
+
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
