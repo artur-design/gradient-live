@@ -25,16 +25,15 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y wget unzip
         wget https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip
-        mkdir -p $HOME/Android/Sdk/cmdline-tools
-        unzip commandlinetools-linux-6609375_latest.zip -d $HOME/Android/Sdk/cmdline-tools
-        yes | $HOME/Android/Sdk/cmdline-tools/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
-        $HOME/Android/Sdk/cmdline-tools/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --list  # Проверка установленных компонентов
-    
+        mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
+        unzip commandlinetools-linux-6609375_latest.zip -d $HOME/Android/Sdk/cmdline-tools/latest
+        yes | $HOME/Android/Sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
+
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
-      
+
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --info
+      run: ./gradlew assembleDebug
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
