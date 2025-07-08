@@ -30,12 +30,14 @@ jobs:
         yes | $HOME/Android/Sdk/cmdline-tools/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
         $HOME/Android/Sdk/cmdline-tools/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --list  # Проверка установленных компонентов
 
+    - name: Create local.properties
+      run: echo "sdk.dir=$HOME/Android/Sdk" > local.properties
 
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --info
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
