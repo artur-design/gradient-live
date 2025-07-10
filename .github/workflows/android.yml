@@ -27,17 +27,10 @@ jobs:
         wget https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip
         mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
         unzip commandlinetools-linux-6609375_latest.zip -d $HOME/Android/Sdk/cmdline-tools/latest
+        # Проверка содержимого каталога cmdline-tools/latest
         ls -la $HOME/Android/Sdk/cmdline-tools/latest/tools/bin
         yes | $HOME/Android/Sdk/cmdline-tools/latest/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
-
-    - name: Download and install Gradle
-      run: |
-        GRADLE_VERSION=$(curl -s https://gradle.org/releases/ | grep -oP 'gradle-\K[0-9.]+(?=-bin.zip)' | head -1)
-        wget https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip
-        unzip gradle-$GRADLE_VERSION-bin.zip -d /opt/gradle
-        echo "GRADLE_HOME=/opt/gradle/gradle-$GRADLE_VERSION" >> $GITHUB_ENV
-        echo "/opt/gradle/gradle-$GRADLE_VERSION/bin" >> $GITHUB_PATH
-
+    
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
