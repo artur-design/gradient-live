@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27 // Установите на 27
+    compileSdkVersion 27 // Оставьте на уровне 27
     buildToolsVersion "27.0.3" // Укажите версию инструментов сборки
 
     defaultConfig {
         applicationId "com.example.gradient"
         minSdkVersion 14
-        targetSdkVersion 27 // Установите на 27
+        targetSdkVersion 27 // Оставьте на уровне 27
         versionCode 1
         versionName "1.0"
     }
@@ -15,15 +15,16 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' // Оставьте файл ProGuard
         }
     }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:27.1.1' // Оставьте эту зависимость
-    compile 'net.objecthunter:exp4j:0.4.8'
+    implementation 'com.android.support:appcompat-v7:27.1.1' // Оставьте эту зависимость
+    implementation 'net.objecthunter:exp4j:0.4.8' // Оставьте эту зависимость
 
     // Добавьте другие зависимости, если необходимо
 }
+
 
