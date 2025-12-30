@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="err1">最小值不能大于最大值。</string>
+    <string name="refresh_rate">刷新率</string>
+    <string name="current_rate">当前刷新率： </string>
+    <string name="current_frames">当前帧数： </string>
+    <string name="err2">请输入有效的数字</string>
+    <string name="err3">请输入不小于 30 的数值</string>
+    <string name="current_coef">当前系数： </string>
+    <string name="direction">方向： </string>
+    <string name="select_direction">选择方向</string>
+    <string name="err4">请输入 1 到 5 之间的数值</string>
+    <string name="color_settings">颜色设置</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="def">默认</string>
+    <string name="err5">在 RGB 模式下不允许使用 h、s、v 变量。</string>
+    <string name="error">错误</string>
+    <string name="err6">在 HSV 模式下不允许使用 r、g、b 变量。</string>
+
+    <string name="about">gradient live – 动态渐变壁纸。应用 “gradient live” 提供以下设置：
+
+		1. 刷新率 – 选择帧率，受设备屏幕刷新率限制。
+		2. 帧数 – 设置渐变的帧数（最低 30），影响速度和平滑度。
+		3. 渐变长度系数 – 以屏幕为单位选择渐变长度（可为小数或整数，范围 1‑5），影响速度和锐度。
+		4. 运动方向 – 选择渐变的移动方向。若选择“中心”，则不显示渐变，整个屏幕呈单色并随设置平滑变化。
+		5. 颜色生成规则 – 定义下一颜色的生成方式。可用变量：r、g、b、h、s、v、random()、random(max)、random(min, max)；数字（含小数）；运算符 ‘+’、‘-’、‘*’、‘/’、‘%’；以及括号 ‘(’、‘)’。任何包含其他字符或首次无法计算的表达式将不被保存；若后续计算失败，函数将返回 0。</string>
+
+    <string name="ok">确定</string>
+    <string name="how_use">使用说明</string>
+    <string name="hz"> Hz</string>
+    <string name="set">设置</string>
+    <string name="install">前往安装</string>
+    <string name="settings">渐变设置</string>
+    <string name="about_app">关于应用</string>
+    <string name="select_about">点击了解如何使用本应用。</string>
+    <string name="coef">渐变长度系数</string>
+    <string name="frames">帧数</string>
+    <string name="movement_direction">运动方向</string>
+    <string name="color_generation">颜色生成规则</string>
+    <string name="set_color_gen">设置颜色生成规则</string>
+    <string name="battery">省电模式</string>
+    <string name="black">黑色壁纸</string>
+    <string name="set_black">启用黑色壁纸</string>
+</resources>
+

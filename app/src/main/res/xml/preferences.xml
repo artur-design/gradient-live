@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+     <PreferenceCategory android:title="@string/settings">
+    <ListPreference
+        android:key="screenRefreshRate"
+        android:title="@string/refresh_rate"
+        android:summary="@string/current_rate"
+        android:dialogTitle="@string/refresh_rate"
+        android:entries="@array/refresh_rate_entries"
+        android:entryValues="@array/refresh_rate_values" />
+
+    <EditTextPreference
+        android:key="frameCount"
+        android:title="@string/frames"
+        android:summary="@string/current_frames"
+        android:inputType="number" />
+
+<EditTextPreference
+    android:key="gradientLengthCoefficient"
+    android:title="@string/coef"
+    android:summary="@string/err4"
+    android:inputType="numberDecimal" />
+
+
+    <Preference
+        android:key="movementDirection"
+        android:title="@string/movement_direction"
+        android:summary="@string/select_direction" />
+
+    <Preference
+        android:key="colorGenerationRuless"
+        android:title="@string/color_generation"
+        android:summary="@string/set_color_gen" />
+</PreferenceCategory>
+    <PreferenceCategory android:title="@string/battery">
+    <CheckBoxPreference
+        android:key="blackWallpaper"
+        android:title="@string/black"
+        android:summary="@string/set_black" />
+</PreferenceCategory>
+    <PreferenceCategory android:title="@string/about_app">
+<Preference
+    android:key="howToUse"
+    android:title="@string/how_use"
+    android:summary="@string/select_about" />
+</PreferenceCategory>
+
+
+</PreferenceScreen>

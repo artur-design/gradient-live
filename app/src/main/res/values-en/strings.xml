@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="err1">Minimum value cannot be greater than maximum.</string>
+	<string name="refresh_rate">Refresh rate</string>
+	<string name="current_rate">Current rate: </string>
+	<string name="current_frames">Current frame count: </string>
+	<string name="err2">Please enter a valid number</string>
+	<string name="err3">Enter a value of at least 30</string>
+	<string name="current_coef">Current coefficient: </string>
+	<string name="direction">Direction: </string>
+	<string name="select_direction">Select direction</string>
+	<string name="err4">Enter a value between 1 and 5</string>
+	<string name="color_settings">Color settings</string>
+	<string name="save">Save</string>
+	<string name="cancel">Cancel</string>
+	<string name="def">Default</string>
+	<string name="err5">Using h, s, v variables is not allowed in RGB mode.</string>
+	<string name="error">Error</string>
+	<string name="err6">Using r, g, b variables is not allowed in HSV mode.</string>
+
+	<string name="about">gradient live – a live gradient wallpaper. The “gradient live” app offers the following settings:
+
+		1. Refresh rate – choose the frame rate, limited by your device’s screen refresh rate.
+		2. Frame count – set the number of gradient frames (minimum 30), affecting speed and smoothness.
+		3. Gradient length coefficient – choose the gradient length in screen units (fractional or integer from 1 to 5), influencing speed and sharpness.
+		4. Movement direction – select the direction of gradient motion. Choosing “center” disables the gradient, showing a single color that changes smoothly according to your settings.
+		5. Color generation rules – define how the next color is generated. Available variables: r, g, b, h, s, v, random(), random(max), random(min, max); numbers (including fractions); operators ‘+’, ‘-’, ‘*’, ‘/’, ‘%’; and parentheses ‘(’, ‘)’. Any expression containing other characters or that cannot be evaluated initially will not be saved. If it later fails to evaluate, the function will return 0.</string>
+
+	<string name="ok">OK</string>
+	<string name="how_use">How to use</string>
+	<string name="hz"> Hz</string>
+	<string name="set">Configure</string>
+	<string name="install">Proceed to installation</string>
+	<string name="settings">Gradient settings</string>
+	<string name="about_app">About the app</string>
+	<string name="select_about">Tap to learn how to use the app.</string>
+	<string name="coef">Gradient length coefficient</string>
+	<string name="frames">Frame count</string>
+	<string name="movement_direction">Movement direction</string>
+	<string name="color_generation">Color generation rules</string>
+	<string name="set_color_gen">Set rules for color generation</string>
+	<string name="battery">Battery saver</string>
+	<string name="black">Black wallpaper</string>
+	<string name="set_black">Enable black wallpaper</string>
+</resources>

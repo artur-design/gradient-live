@@ -1,0 +1,43 @@
+<resources>
+
+    <string name="app_name">Gradient live</string>
+    <string name="wallpaper_description">Live Wallpaper Gradient</string>
+    <string name="wallpaper_name">gradient live</string>
+    <string name="err1">"Минимальное значение не может быть больше максимального."</string>
+    <string name="refresh_rate">"Частота обновления"</string>
+    <string name="current_rate">"Текущая частота: "</string>
+    <string name="current_frames">"Текущее количество кадров: "</string>
+    <string name="err2">"Введите корректное число"</string>
+    <string name="err3">"Введите значение от 30"</string>
+    <string name="current_coef">"Текущий коэффициент: "</string>
+    <string name="direction">"Направление: "</string>
+    <string name="select_direction">"Выберите направление"</string>
+    <string name="err4">"Введите значение от 1 до 5"</string>
+    <string name="color_settings">"Настройки цвета"</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="def">По умолчанию</string>
+    <string name="err5">"Использование переменных h, s, v не разрешено в режиме RGB."</string>
+    <string name="error">Ошибка</string>
+    <string name="err6">"Использование переменных r, g, b не разрешено в режиме HSV."</string>
+    <string name="about">"gradient live - это живые градиентные обои. В приложении 'gradient live' доступны следующие настройки:\n\n1. Частота обновления. Здесь вы можете выбрать частоту кадров, максимальным количеством которой является частота экрана вашего телефона.\n2. Количество кадров. Здесь вы можете ввеси количество кадров градиента от 30, что влияет на скорость и плавность движения.\n3. Коэффициент длины градиента. Здесь вы можете выбрать длину градиента в экранах, вводя дробные или целое число от 1 до 5,что влияет на скорость и резкость градиента.\n4. Направление движения. В этом пункте вы можете выбрать направление движения градиента. Если же вы выберете центр, то градиента не будет, но весь экран будет одного цвета, который будет плавно меняться а соответствии с вашими настройками.\n5. в правилах генерации цвета вы устанавливаете закономерность генерации следующего цвета. Там доступны переменные: r, g, b, h, s, v, random(), random(max), random(min, max); числа, в том числе и дробные; операторы: '+', '-', '*', '/', '%'; а также скобки '(' и ')'. Если введенное выражение содержит что-то, кроме этого, или не сможет выполниться даже в первый раз, то оно не будет сохранено. Если же оно не сможет выполниться в последующем, то функция вернёт значение 0"</string>
+    <string name="ok">OK</string>
+    <string name="how_use">Как пользоваться</string>
+    <string name="hz"> Гц</string>
+    <string name="set">Настроить</string>
+    <string name="install">Перейти к установке</string>
+    <string name="settings">Настройки градиента</string>
+    <string name="about_app">О приложении</string>
+    <string name="select_about">Нажмите, чтобы узнать, как пользоваться приложением.</string>
+    <string name="coef">Коэффициент длины градиента</string>
+    <string name="frames">Количество кадров</string>
+    <string name="movement_direction">Направление движения</string>
+    <string name="color_generation">Правила генерации цвета</string>
+    <string name="set_color_gen">Настройте правила для генерации цвета</string>
+    <string name="battery">Экономия батареи</string>
+    <string name="black">Чёрные обои</string>
+    <string name="set_black">Включить черные обои</string>
+    <string-array name="refresh_rate_entries" />
+    <string-array name="refresh_rate_values" />
+
+</resources>

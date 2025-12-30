@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+android:id="@+id/gridLayout"
+    android:rowCount="3"
+    android:columnCount="3"
+    android:padding="0dp">
+
+    <Button
+        android:id="@+id/buttonUpLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↖"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonUp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↑"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonUpRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↗"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="←"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonCenter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="•"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="→"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonDownLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↙"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↓"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:id="@+id/buttonDownRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↘"
+        android:background="@android:color/transparent"
+        android:layout_margin="0dp"/>
+
+</GridLayout>

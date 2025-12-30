@@ -1,0 +1,2 @@
+NAME=gradient-live-main
+FROM_GRADLE=TRUE

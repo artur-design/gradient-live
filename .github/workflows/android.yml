@@ -1,0 +1,44 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: 11
+
+    - name: Install Android SDK
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip
+        mkdir -p $HOME/Android/Sdk/cmdline-tools/latest
+        unzip commandlinetools-linux-6609375_latest.zip -d $HOME/Android/Sdk/cmdline-tools/latest
+        # Проверка содержимого каталога cmdline-tools/latest
+        ls -la $HOME/Android/Sdk/cmdline-tools/latest/tools/bin
+        yes | $HOME/Android/Sdk/cmdline-tools/latest/tools/bin/sdkmanager --sdk_root=$HOME/Android/Sdk --install "platforms;android-27" "build-tools;27.0.3"
+    
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
+
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk

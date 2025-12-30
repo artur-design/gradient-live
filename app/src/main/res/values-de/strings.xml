@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="err1">Der Minimalwert darf nicht größer als der Maximalwert sein.</string>
+    <string name="refresh_rate">Bildwiederholrate</string>
+    <string name="current_rate">Aktuelle Rate: </string>
+    <string name="current_frames">Aktuelle Bildanzahl: </string>
+    <string name="err2">Bitte geben Sie eine gültige Zahl ein</string>
+    <string name="err3">Geben Sie einen Wert von mindestens 30 ein</string>
+    <string name="current_coef">Aktueller Koeffizient: </string>
+    <string name="direction">Richtung: </string>
+    <string name="select_direction">Richtung auswählen</string>
+    <string name="err4">Geben Sie einen Wert zwischen 1 und 5 ein</string>
+    <string name="color_settings">Farbeinstellungen</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="def">Standard</string>
+    <string name="err5">Die Verwendung der Variablen h, s, v ist im RGB‑Modus nicht erlaubt.</string>
+    <string name="error">Fehler</string>
+    <string name="err6">Die Verwendung der Variablen r, g, b ist im HSV‑Modus nicht erlaubt.</string>
+
+    <string name="about">gradient live – ein Live‑Gradient‑Wallpaper. Die App „gradient live“ bietet folgende Einstellungen:
+
+		1. Bildwiederholrate – wählen Sie die Bildrate, begrenzt durch die Bildwiederholrate Ihres Bildschirms.
+		2. Bildanzahl – legen Sie die Anzahl der Gradient‑Frames fest (mindestens 30), was Geschwindigkeit und Glätte beeinflusst.
+		3. Gradient‑Längen‑Koeffizient – wählen Sie die Gradient‑Länge in Bildschirmen (Ganzzahl oder Dezimalzahl von 1 bis 5), was Geschwindigkeit und Schärfe beeinflusst.
+		4. Bewegungsrichtung – wählen Sie die Richtung des Gradient‑Verschiebens. Wird „Mitte“ gewählt, gibt es keinen Gradient, sondern der gesamte Bildschirm zeigt eine einheitliche Farbe, die sich gemäß Ihren Einstellungen sanft ändert.
+		5. Farb‑Generierungsregeln – definieren Sie, wie die nächste Farbe erzeugt wird. Verfügbare Variablen: r, g, b, h, s, v, random(), random(max), random(min, max); Zahlen (auch Dezimalzahlen); Operatoren ‘+’, ‘-’, ‘*’, ‘/’, ‘%’; und Klammern ‘(’, ‘)’. Jede Ausdruck, der andere Zeichen enthält oder beim ersten Mal nicht ausgewertet werden kann, wird nicht gespeichert. Schlägt die Auswertung später fehl, gibt die Funktion 0 zurück.</string>
+
+    <string name="ok">OK</string>
+    <string name="how_use">Wie man es benutzt</string>
+    <string name="hz"> Hz</string>
+    <string name="set">Konfigurieren</string>
+    <string name="install">Zur Installation gehen</string>
+    <string name="settings">Gradient‑Einstellungen</string>
+    <string name="about_app">Über die App</string>
+    <string name="select_about">Tippen Sie, um zu erfahren, wie die App verwendet wird.</string>
+    <string name="coef">Gradient‑Längen‑Koeffizient</string>
+    <string name="frames">Bildanzahl</string>
+    <string name="movement_direction">Bewegungsrichtung</string>
+    <string name="color_generation">Farb‑Generierungsregeln</string>
+    <string name="set_color_gen">Regeln für die Farb‑Generierung festlegen</string>
+    <string name="battery">Energiesparmodus</string>
+    <string name="black">Schwarzes Wallpaper</string>
+    <string name="set_black">Schwarzes Wallpaper aktivieren</string>
+</resources>
+
