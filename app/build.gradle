@@ -9,10 +9,12 @@ android {
         minSdkVersion 21
         targetSdkVersion 35 // Оставьте на уровне 27
         versionCode 1
-        versionName "1"
+        versionName "1.0"
         vectorDrawables.useSupportLibrary = true
 
     }
+
+	namespace "com.example.gradient"
 
     buildTypes {
         release {
