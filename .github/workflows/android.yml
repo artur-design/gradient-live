@@ -24,6 +24,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
 
+    - name: Show dependency tree (debug)
+      run: ./gradlew :app:dependencies --configuration debugCompileClasspath
+
     - name: Build Debug APK
       run: ./gradlew assembleDebug
 
@@ -33,4 +36,5 @@ jobs:
         name: app-debug-apk
         # Используем маску, чтобы точно найти файл
         path: app/build/outputs/apk/debug/*.apk
+
 
