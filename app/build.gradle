@@ -22,6 +22,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' // Оставьте файл ProGuard
         }
     }
+	configurations.all {
+        resolutionStrategy {
+            // Принудительно использовать 1.8.20 для всех артефактов Kotlin
+            force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+        }
+	}
 }
 
 dependencies {
