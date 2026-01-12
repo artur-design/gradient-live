@@ -1,43 +1,40 @@
-name: Build Android APK
+name: Android CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30          # общий таймаут job, чтобы покрыть длительный эмулятор
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      - name: Set up JDK 11          # JDK, совместимый с Java 8 (можно 21, если меняете source/target)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: '11'
           cache: 'gradle'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
-
-      - name: Show dependency tree (debug)
-        run: ./gradlew :app:dependencies --configuration debugCompileClasspath
-
-      # ---------- Юнит‑тесты ----------
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest
-
-      # ---------- UI‑тесты ----------
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
         with:
           api-level: 34
-          build-tools: 34.0.0
+          build-tools: 35.0.0
 
+      - name: Grant execute permission
+        run: chmod +x ./gradlew
+
+      # ---------- Юнит‑тесты ----------
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest --warning-mode all
+
+      # ---------- UI‑тесты ----------
       - name: Run UI tests on emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -52,10 +49,24 @@ jobs:
             -no-snapshot-load
             -no-snapshot-save
             -accel off
+          timeout-minutes: 15
           script: |
             adb start-server
             adb wait-for-device
-            timeout 300 bash -c 'while [[ "$(adb shell getprop sys.boot_completed 2>/dev/null)" != "1" ]]; do sleep 5; done'
+            timeout 900 bash -c '
+              while true; do
+                BOOT=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d "\r")
+                if [ "$BOOT" = "1" ]; then
+                  echo "✅ Device is online"
+                  exit 0
+                fi
+                sleep 5
+              done
+            '
+            if [ $? -ne 0 ]; then
+              echo "❌ Boot timeout"
+              exit 1
+            fi
             ./gradlew connectedDebugAndroidTest
 
       # ---------- Сборка APK ----------
