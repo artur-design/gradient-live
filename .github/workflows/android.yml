@@ -19,7 +19,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          cache: 'gradle'   # кеш Gradle
+          cache: 'gradle'
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
@@ -27,47 +27,48 @@ jobs:
       - name: Show dependency tree (debug)
         run: ./gradlew :app:dependencies --configuration debugCompileClasspath
 
-      # -------------------------------------------------
-      # 1️⃣ Юнит‑тесты (JUnit, Robolectric и т.п.)
-      # -------------------------------------------------
+      # ---------- Юнит‑тесты ----------
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
 
-      # -------------------------------------------------
-      # 2️⃣ Инструментальные UI‑тесты (на эмуляторе)
-      # -------------------------------------------------
+      # ---------- UI‑тесты ----------
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
         with:
-          api-level: 34          # любой уровень, который нужен вашему проекту
+          api-level: 34
           build-tools: 34.0.0
 
-      - name: Start Android emulator and run UI tests
+      - name: Run UI tests on emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
-          target: google_apis      # или google_apis_playstore, если нужны Play‑services
+          target: google_apis
           arch: x86_64
-          script: ./gradlew connectedDebugAndroidTest
+          emulator-options: >-
+            -no-window
+            -no-audio
+            -no-boot-anim
+            -gpu swiftshader_indirect
+            -no-snapshot-load
+            -no-snapshot-save
+            -accel off
+          script: |
+            adb start-server
+            adb wait-for-device
+            timeout 300 bash -c 'while [[ "$(adb shell getprop sys.boot_completed 2>/dev/null)" != "1" ]]; do sleep 5; done'
+            ./gradlew connectedDebugAndroidTest
 
-      # -------------------------------------------------
-      # 3️⃣ Сборка Debug‑APK
-      # -------------------------------------------------
+      # ---------- Сборка APK ----------
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
-      # -------------------------------------------------
-      # 4️⃣ Сохранение артефактов
-      # -------------------------------------------------
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
           path: app/build/outputs/apk/debug/*.apk
 
-      # -------------------------------------------------
-      # 5️⃣ (Опционально) Сохранить logcat при падении UI‑тестов
-      # -------------------------------------------------
+      # ---------- Сохранить logcat при падении ----------
       - name: Save logcat on failure
         if: failure()
         run: |
