@@ -2,6 +2,11 @@
 
 package com.example.gradient;
 
+import android.content.Intent;                     // запуск SettingsActivity
+import android.view.GestureDetector;               // обработка двойного тапа
+import android.view.MotionEvent;                  // событие касания
+import android.view.GestureDetector.SimpleOnGestureListener;
+
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
