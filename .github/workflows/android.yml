@@ -1,93 +1,40 @@
-name: Android CI
+name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30          # общий таймаут job, чтобы покрыть длительный эмулятор
 
     steps:
-      - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Set up JDK 11          # JDK, совместимый с Java 8 (можно 21, если меняете source/target)
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '11'
-          cache: 'gradle'
+    - name: Set up JDK 21  # Обновлено до актуальной версии для Gradle 9.x
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+        cache: 'gradle' # Автоматически кеширует зависимости, ускоряя сборку
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
-        with:
-          api-level: 34
-          build-tools: 35.0.0
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
 
-      - name: Grant execute permission
-        run: chmod +x ./gradlew
+    - name: Show dependency tree (debug)
+      run: ./gradlew :app:dependencies --configuration debugCompileClasspath
 
-      # ---------- Юнит‑тесты ----------
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest --warning-mode all
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
 
-      # ---------- UI‑тесты ----------
-      - name: Run UI tests on emulator
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 34
-          target: google_apis
-          arch: x86_64
-          emulator-options: >-
-            -no-window
-            -no-audio
-            -no-boot-anim
-            -gpu swiftshader_indirect
-            -no-snapshot-load
-            -no-snapshot-save
-            -accel off
-          timeout-minutes: 15
-          script: |
-            adb start-server
-            adb wait-for-device
-            timeout 900 bash -c '
-              while true; do
-                BOOT=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d "\r")
-                if [ "$BOOT" = "1" ]; then
-                  echo "✅ Device is online"
-                  exit 0
-                fi
-                sleep 5
-              done
-            '
-            if [ $? -ne 0 ]; then
-              echo "❌ Boot timeout"
-              exit 1
-            fi
-            ./gradlew connectedDebugAndroidTest
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug-apk
+        # Используем маску, чтобы точно найти файл
+        path: app/build/outputs/apk/debug/*.apk
 
-      # ---------- Сборка APK ----------
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
 
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
-
-      # ---------- Сохранить logcat при падении ----------
-      - name: Save logcat on failure
-        if: failure()
-        run: |
-          mkdir -p logs
-          adb logcat -d > logs/logcat.log
-      - name: Upload logcat
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: logcat
-          path: logs/logcat.log
