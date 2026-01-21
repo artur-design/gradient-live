@@ -28,6 +28,7 @@ public class GradientWallpaperService extends WallpaperService {
 	}
 	
     public class GradientWallpaperEngine extends WallpaperService.Engine {
+									private final GestureDetector gestureDetector;
         private Paint paint = new Paint();
         private Context context;
         private int color1, color2, targetColor1, targetColor2, targetColor3, frameCount, screenRefreshRate;
@@ -43,7 +44,34 @@ public class GradientWallpaperService extends WallpaperService {
         public GradientWallpaperEngine(Context context) {
             this.context = context.getApplicationContext(); 
             updatePreferences();
+
+setTouchEventsEnabled(true);
+
+        // 2️⃣ создаём GestureDetector
+        gestureDetector = new GestureDetector(appContext,
+                new GestureDetector.SimpleOnGestureListener() {
+                    @Override
+                    public boolean onDoubleTap(MotionEvent e) {
+                        openSettings();
+                        return true;            // событие обработано
+                    }
+                });
         }
+
+
+    /** Запуск SettingsActivity */
+    private void openSettings() {
+        Intent intent = new Intent(appContext, SettingsActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        appContext.startActivity(intent);
+    }
+
+    /** Передаём все события в GestureDetector */
+    @Override
+    public void onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
+        gestureDetector.onTouchEvent(event);
+    }
 
         public void updatePreferences() {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
