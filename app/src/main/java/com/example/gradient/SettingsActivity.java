@@ -44,7 +44,7 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences.Editor editor;
   		@Override
   		public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-    		super.onCreate(savedInstanceState);
+    		//super.onCreate(savedInstanceState);
 			setPreferencesFromResource(R.xml.preferences,rootKey);
     		//addPreferencesFromResource(R.xml.preferences);
     		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
