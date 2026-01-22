@@ -119,8 +119,9 @@ setTouchEventsEnabled(true);
           super.onVisibilityChanged(visible);
         if (visible) {
                 // возобновить анимацию / отрисовку
-if (currentSurface != null) {
-                handler.post(runnable(currentSurface));
+if (holder.getSurface != null) {
+                //handler.post(runnable(currentSurface));
+return;
             }
             } else {
                 // приостановить, экономим батарею
