@@ -53,7 +53,7 @@ public class GradientWallpaperService extends WallpaperService {
 setTouchEventsEnabled(true);
 
         // 2️⃣ создаём GestureDetector
-        gestureDetector = new GestureDetector(appContext,
+        gestureDetector = new GestureDetector(context,
                 new GestureDetector.SimpleOnGestureListener() {
                     @Override
                     public boolean onDoubleTap(MotionEvent e) {
@@ -66,9 +66,9 @@ setTouchEventsEnabled(true);
 
     /** Запуск SettingsActivity */
     private void openSettings() {
-        Intent intent = new Intent(appContext, SettingsActivity.class);
+        Intent intent = new Intent(context, SettingsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        appContext.startActivity(intent);
+        context.startActivity(intent);
     }
 
     /** Передаём все события в GestureDetector */
