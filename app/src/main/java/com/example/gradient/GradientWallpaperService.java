@@ -114,6 +114,20 @@ setTouchEventsEnabled(true);
     		startPreview(holder.getSurface()); //передаем Surface
 		}
 
+  @Override
+  public void onVisibilityChanged(boolean visible) {
+          super.onVisibilityChanged(visible);
+        if (visible) {
+                // возобновить анимацию / отрисовку
+if (currentSurface != null) {
+                handler.post(runnable(currentSurface));
+            }
+            } else {
+                // приостановить, экономим батарею
+handler.removeCallbacksAndMessages(null);
+            }
+        }
+
 		@Override
 		public void onSurfaceDestroyed(SurfaceHolder holder) {
     		super.onSurfaceDestroyed(holder);
