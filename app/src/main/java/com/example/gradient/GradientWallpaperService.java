@@ -35,6 +35,8 @@ public class GradientWallpaperService extends WallpaperService {
     public class GradientWallpaperEngine extends WallpaperService.Engine {
 									private final GestureDetector gestureDetector;
         private Paint paint = new Paint();
+private Surface currentSurface;
+
         private Context context;
         private int color1, color2, targetColor1, targetColor2, targetColor3, frameCount, screenRefreshRate;
         int h, s, v, r, g, b;
@@ -119,7 +121,7 @@ setTouchEventsEnabled(true);
           super.onVisibilityChanged(visible);
         if (visible) {
                 // возобновить анимацию / отрисовку
-if (holder.getSurface != null) {
+if (currentSurface != null) {
                 //handler.post(runnable(currentSurface));
 return;
             }
