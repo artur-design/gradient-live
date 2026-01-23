@@ -38,8 +38,9 @@ public class GradientWallpaperService extends WallpaperService {
 private Surface currentSurface;
 
         private Context context;
+private boolean isVisible = true;
         private int color1, color2, targetColor1, targetColor2, targetColor3, frameCount, screenRefreshRate;
-        int h, s, v, r, g, b;
+        private int h, s, v, r, g, b;
         private String sr, sg, sb, sh, ss, sv, type, md;
         private boolean black = false;
         private float transitionProgress = 1.0f;
@@ -98,6 +99,7 @@ setTouchEventsEnabled(true);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
 			color1 = Color.BLACK;
 			color2 = Color.BLACK;
+initDebugPaint()
 			prefs.registerOnSharedPreferenceChangeListener(prefListener);
         }
 
@@ -113,7 +115,8 @@ setTouchEventsEnabled(true);
 		public void onSurfaceCreated(SurfaceHolder holder) {
     		super.onSurfaceCreated(holder);
     		updatePreferences();
-    		startPreview(holder.getSurface()); //передаем Surface
+currentSurface = holder.getSurface();
+    		startPreview(currentSurface); //передаем Surface
 		}
 
   @Override
@@ -122,8 +125,7 @@ setTouchEventsEnabled(true);
         if (visible) {
                 // возобновить анимацию / отрисовку
 if (currentSurface != null) {
-                //handler.post(runnable(currentSurface));
-return;
+                handler.post(runnable(currentSurface));
             }
             } else {
                 // приостановить, экономим батарею
@@ -142,7 +144,8 @@ handler.removeCallbacksAndMessages(null);
 		@Override
 		public void onSurfaceChanged(SurfaceHolder holder, int format, int width, int height) {
     		super.onSurfaceChanged(holder, format, width, height);
-    		startPreview(holder.getSurface());
+currentSurface = holder.getSurface();
+    		startPreview(currentSurface);
 		}
 
 		public void startPreview(Surface surface) {
@@ -159,6 +162,7 @@ handler.removeCallbacksAndMessages(null);
             return new Runnable() {
                 @Override
                 public void run() {
+if (!isVisible) return;
 					transitionProgress += transitionStep;
                     if (transitionProgress >= 1f) {
                         targetColor1 = targetColor2;
@@ -179,10 +183,44 @@ handler.removeCallbacksAndMessages(null);
                     color1 = blendColors(targetColor1, targetColor2, transitionProgress);
                     color2 = blendColors(targetColor2, targetColor3, transitionProgress);
                     drawWallpaper(surface);
+if(black) return;
                     handler.postDelayed(this, transitionDuration);
                 }
             };
         }
+
+private final Paint debugTextPaint = new Paint();
+
+private void initDebugPaint() {
+    debugTextPaint.setColor(Color.WHITE);      // читаемый цвет
+    debugTextPaint.setTextSize(36f);           // размер текста
+    debugTextPaint.setAntiAlias(true);
+    debugTextPaint.setTypeface(Typeface.MONOSPACE);
+}
+
+private void drawDebugInfo(Canvas canvas) {
+    // Формируем строки
+    String colorsLine = String.format(
+            "c1=0x%06X  t2=0x%06X  c2=0x%06X",
+            (0xFFFFFF & color1),
+            (0xFFFFFF & targetColor2),
+            (0xFFFFFF & color2));
+
+    String positionsLine = String.format(
+            "pos=[%.2f, %.2f, %.2f]",
+            0.0f,
+            transitionProgress,
+            1.0f);
+
+    // Позиция текста (отступ от левого/верхнего края)
+    float x = 20f;
+    float y = 40f;                       // первая строка
+    float lineHeight = debugTextPaint.getFontSpacing();
+
+    canvas.drawText(colorsLine,   x, y,                     debugTextPaint);
+    canvas.drawText(positionsLine, x, y + lineHeight,        debugTextPaint);
+}
+
 
        	private void drawWallpaper(Surface surface) {
         	if (surface == null) return;
@@ -216,6 +254,7 @@ handler.removeCallbacksAndMessages(null);
                     }
                     paint.setShader(gradient);
                     canvas.drawRect(0, 0, width, height, paint);
+drawDebugInfo(canvas);
             	} finally {
             		if (canvas != null) surface.unlockCanvasAndPost(canvas);
         		}
