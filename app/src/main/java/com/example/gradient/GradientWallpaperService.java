@@ -99,7 +99,6 @@ setTouchEventsEnabled(true);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
 			color1 = Color.BLACK;
 			color2 = Color.BLACK;
-initDebugPaint();
 			prefs.registerOnSharedPreferenceChangeListener(prefListener);
         }
 
@@ -183,43 +182,10 @@ if (!isVisible) return;
                     color1 = blendColors(targetColor1, targetColor2, transitionProgress);
                     color2 = blendColors(targetColor2, targetColor3, transitionProgress);
                     drawWallpaper(surface);
-if(black) return;
                     handler.postDelayed(this, transitionDuration);
                 }
             };
         }
-
-private final Paint debugTextPaint = new Paint();
-
-private void initDebugPaint() {
-    debugTextPaint.setColor(Color.WHITE);      // читаемый цвет
-    debugTextPaint.setTextSize(36f);           // размер текста
-    debugTextPaint.setAntiAlias(true);
-}
-
-private void drawDebugInfo(Canvas canvas) {
-    // Формируем строки
-    String colorsLine = String.format(
-            "c1=0x%06X  t2=0x%06X  c2=0x%06X",
-            (0xFFFFFF & color1),
-            (0xFFFFFF & targetColor2),
-            (0xFFFFFF & color2));
-
-    String positionsLine = String.format(
-            "pos=[%.2f, %.2f, %.2f]",
-            0.0f,
-            transitionProgress,
-            1.0f);
-
-    // Позиция текста (отступ от левого/верхнего края)
-    float x = 20f;
-    float y = 40f;                       // первая строка
-    float lineHeight = debugTextPaint.getFontSpacing();
-
-    canvas.drawText(colorsLine,   x, y,                     debugTextPaint);
-    canvas.drawText(positionsLine, x, y + lineHeight,        debugTextPaint);
-}
-
 
        	private void drawWallpaper(Surface surface) {
         	if (surface == null) return;
@@ -253,7 +219,14 @@ private void drawDebugInfo(Canvas canvas) {
                     }
                     paint.setShader(gradient);
                     canvas.drawRect(0, 0, width, height, paint);
-drawDebugInfo(canvas);
+Paint textPaint = new Paint();
+        textPaint.setColor(Color.WHITE);         // цвет текста
+        textPaint.setTextSize(48f);              // размер шрифта
+        textPaint.setAntiAlias(true);
+
+        // 3️⃣ Нарисуйте строку «r = 123» в левом‑верхнем углу
+        String text = "r = " + valueToShow;
+        canvas.drawText(text, 20f, 60f, textPaint);   // (x, y) – позиция текста
             	} finally {
             		if (canvas != null) surface.unlockCanvasAndPost(canvas);
         		}
