@@ -225,7 +225,7 @@ Paint textPaint = new Paint();
         textPaint.setAntiAlias(true);
 
         // 3️⃣ Нарисуйте строку «r = 123» в левом‑верхнем углу
-        String text = String.format("#%08X", color2) + " " + String.format("#%08X", targetColor) + " " + String.format("#%08X", color1);
+        String text = String.format("#%08X", color2) + " " + String.format("#%08X", targetColor2) + " " + String.format("#%08X", color1);
         canvas.drawText(text, 20f, 500f, textPaint);   // (x, y) – позиция текста
             	} finally {
             		if (canvas != null) surface.unlockCanvasAndPost(canvas);
