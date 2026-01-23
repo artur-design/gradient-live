@@ -99,7 +99,7 @@ setTouchEventsEnabled(true);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
 			color1 = Color.BLACK;
 			color2 = Color.BLACK;
-initDebugPaint()
+initDebugPaint();
 			prefs.registerOnSharedPreferenceChangeListener(prefListener);
         }
 
