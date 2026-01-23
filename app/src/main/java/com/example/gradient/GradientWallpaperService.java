@@ -195,7 +195,6 @@ private void initDebugPaint() {
     debugTextPaint.setColor(Color.WHITE);      // читаемый цвет
     debugTextPaint.setTextSize(36f);           // размер текста
     debugTextPaint.setAntiAlias(true);
-    debugTextPaint.setTypeface(Typeface.MONOSPACE);
 }
 
 private void drawDebugInfo(Canvas canvas) {
