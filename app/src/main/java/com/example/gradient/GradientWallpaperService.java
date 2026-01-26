@@ -43,7 +43,7 @@ private boolean isVisible = true;
 private int targetColor2 = Color.BLACK;
         private int h, s, v, r, g, b;
         private String sr, sg, sb, sh, ss, sv, type, md;
-        private boolean black = false;
+        private boolean black, visibleMode;
         private float transitionProgress = 0.0f;
         private final Handler handler = new Handler();
         private final Random random = new Random();
@@ -97,7 +97,7 @@ setTouchEventsEnabled(true);
 			sv = prefs.getString("myKey" + "_v", "random(150, 255)");
 			type = prefs.getString("myKey" + "_type", "HSV");
 			black = prefs.getBoolean("black", false);
-  isVisible = prefs.getBoolean("isVisible", false);
+  visibleMode = prefs.getBoolean("visibleMode", false);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
 			color1 = Color.BLACK;
 			color2 = Color.BLACK;
@@ -123,6 +123,7 @@ currentSurface = holder.getSurface();
   @Override
   public void onVisibilityChanged(boolean visible) {
           super.onVisibilityChanged(visible);
+isVisible = visible;
         if (visible) {
                 // возобновить анимацию / отрисовку
 if (currentSurface != null) {
