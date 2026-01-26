@@ -42,7 +42,7 @@ private boolean isVisible = true;
         private int color1, color2, frameCount, screenRefreshRate;
 private int targetColor1 = Color.BLACK;
 private int targetColor2 = Color.BLACK;
-private int targetColor3 = COLOR.BLACK;
+private int targetColor3 = Color.BLACK;
         private int h, s, v, r, g, b;
         private String sr, sg, sb, sh, ss, sv, type, md;
         private boolean black, visibleMode;
