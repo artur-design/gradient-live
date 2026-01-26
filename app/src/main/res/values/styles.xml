@@ -3,7 +3,7 @@
 	
 	<style name="Theme.TransparentDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:windowIsFloating">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/colorDark</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorMint2</item>
