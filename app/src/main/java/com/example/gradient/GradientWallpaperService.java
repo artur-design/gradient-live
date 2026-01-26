@@ -39,11 +39,12 @@ private Surface currentSurface;
 
         private Context context;
 private boolean isVisible = true;
-        private int color1, color2, targetColor1, targetColor2, targetColor3, frameCount, screenRefreshRate;
+        private int color1, color2, targetColor1, targetColor3, frameCount, screenRefreshRate;
+private int targetColor2 = Color.BLACK;
         private int h, s, v, r, g, b;
         private String sr, sg, sb, sh, ss, sv, type, md;
         private boolean black = false;
-        private float transitionProgress = 1.0f;
+        private float transitionProgress = 0.0f;
         private final Handler handler = new Handler();
         private final Random random = new Random();
         private float transitionStep, gradientLengthCoefficient;
@@ -96,6 +97,7 @@ setTouchEventsEnabled(true);
 			sv = prefs.getString("myKey" + "_v", "random(150, 255)");
 			type = prefs.getString("myKey" + "_type", "HSV");
 			black = prefs.getBoolean("black", false);
+  isVisible = prefs.getBoolean("isVisible", false);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
 			color1 = Color.BLACK;
 			color2 = Color.BLACK;
@@ -162,7 +164,6 @@ currentSurface = holder.getSurface();
                 @Override
                 public void run() {
 if (!isVisible) return;
-					transitionProgress += transitionStep;
                     if (transitionProgress >= 1f) {
                         targetColor1 = targetColor2;
                         targetColor2 = targetColor3;
@@ -182,6 +183,7 @@ if (!isVisible) return;
                     color1 = blendColors(targetColor1, targetColor2, transitionProgress);
                     color2 = blendColors(targetColor2, targetColor3, transitionProgress);
                     drawWallpaper(surface);
+transitionProgress += transitionStep;
                     handler.postDelayed(this, transitionDuration);
                 }
             };
