@@ -37,6 +37,8 @@
     <string name="battery">Экономия батареи</string>
     <string name="black">Чёрные обои</string>
     <string name="set_black">Включить черные обои</string>
+    <string name="visible">Пауза, если обои не видно</string>
+    <string name="set_visible">Включить для экономии батареи</string>
     <string-array name="refresh_rate_entries" />
     <string-array name="refresh_rate_values" />
 
