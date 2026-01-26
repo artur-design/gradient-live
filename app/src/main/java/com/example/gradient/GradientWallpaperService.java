@@ -2,9 +2,9 @@
 
 package com.example.gradient;
 
-import android.content.Intent;                     // запуск SettingsActivity
-import android.view.GestureDetector;               // обработка двойного тапа
-import android.view.MotionEvent;                  // событие касания
+import android.content.Intent;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.GestureDetector.SimpleOnGestureListener;
 
 import android.graphics.Canvas;
@@ -58,7 +58,6 @@ private int targetColor3 = Color.BLACK;
 
 setTouchEventsEnabled(true);
 
-        // 2️⃣ создаём GestureDetector
         gestureDetector = new GestureDetector(context,
                 new GestureDetector.SimpleOnGestureListener() {
                     @Override
@@ -224,14 +223,6 @@ transitionProgress += transitionStep;
                     }
                     paint.setShader(gradient);
                     canvas.drawRect(0, 0, width, height, paint);
-Paint textPaint = new Paint();
-        textPaint.setColor(Color.WHITE);         // цвет текста
-        textPaint.setTextSize(48f);              // размер шрифта
-        textPaint.setAntiAlias(true);
-
-        // 3️⃣ Нарисуйте строку «r = 123» в левом‑верхнем углу
-        String text = String.format("#%08X", color2) + " " + String.format("#%08X", targetColor2) + " " + String.format("#%08X", color1);
-        canvas.drawText(text, 20f, 500f, textPaint);   // (x, y) – позиция текста
             	} finally {
             		if (canvas != null) surface.unlockCanvasAndPost(canvas);
         		}
