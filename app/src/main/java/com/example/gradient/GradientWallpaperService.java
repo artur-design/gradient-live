@@ -39,7 +39,7 @@ private Surface currentSurface;
 
         private Context context;
 private boolean isVisible = true;
-        private int color1, color2, targetColor1, targetColor3, frameCount, screenRefreshRate;
+        private int color1, color2, frameCount, screenRefreshRate;
 private int targetColor1 = Color.BLACK;
 private int targetColor2 = Color.BLACK;
 private int targetColor3 = COLOR.BLACK;
