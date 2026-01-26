@@ -158,6 +158,17 @@ public class SettingsActivity extends AppCompatActivity {
       			}
     		});
 
+CheckBoxPreference visibleWallpaperPreference = (CheckBoxPreference) findPreference("visibleMode");
+    		visibleWallpaperPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+      			@Override
+      			public boolean onPreferenceChange(Preference preference, Object newValue) {
+        			boolean isChecked = (Boolean) newValue;
+        			editor.putBoolean("visibleMode", isChecked);
+        			editor.apply();
+        			return true;
+      			}
+    		});
+
     		Preference howToUsePreference = findPreference("howToUse");
     		howToUsePreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
       			@Override
