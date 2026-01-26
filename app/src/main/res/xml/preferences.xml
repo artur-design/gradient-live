@@ -38,6 +38,11 @@
         android:key="blackWallpaper"
         android:title="@string/black"
         android:summary="@string/set_black" />
+
+<CheckBoxPreference
+        android:key="visibleMode"
+        android:title="@string/visible"
+        android:summary="@string/set_visible" />
 </PreferenceCategory>
     <PreferenceCategory android:title="@string/about_app">
 <Preference
