@@ -16,12 +16,30 @@ android {
 
 	namespace "com.example.gradient"
 
-    buildTypes {
+   /* buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' // Оставьте файл ProGuard
         }
+    }/*
+
+    aaptOptions {
+        cruncherEnabled true          // включить PNG‑cruncher (по умолчанию включён)
     }
+
+
+buildTypes {
+    release {
+        // 1️⃣ Включаем R8 (минификатор) и удаление ресурсов
+        minifyEnabled true            // <-- изменить с false на true
+        shrinkResources true          // <-- добавить
+
+        // 2️⃣ Файлы правил ProGuard / R8
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                      'proguard-rules.pro'   // лучше использовать оптимизированный файл
+    }
+}
+
 	configurations.all {
         resolutionStrategy {
             // Принудительно использовать 1.8.20 для всех артефактов Kotlin
