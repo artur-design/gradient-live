@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<color name="colorMint">#00cea8</color>
-    <color name="colorMint2">#00ffcc</color>
-    <color name="colorBlue">#303F9F</color>
-    <color name="colorRaspberry">#FF4081</color>
 <color name="colorDark">#323232</color>
 </resources>
