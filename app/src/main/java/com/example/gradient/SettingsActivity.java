@@ -203,7 +203,7 @@ CheckBoxPreference visibleWallpaperPreference = (CheckBoxPreference) findPrefere
       			if (child instanceof Button) {
         			final Button button = (Button) child;
         		// Подсвечиваем кнопку, если ее текст совпадает с сохраненным направлением
-        			if (button.getText().toString().equals(savedDirection)) button.setBackgroundColor(R.color.colorMint2);
+        			if (button.getText().toString().equals(savedDirection)) button.setBackgroundColor(R.color.colorMint);
         			button.setOnClickListener(new View.OnClickListener() {
           				@Override
           				public void onClick(View v) {
