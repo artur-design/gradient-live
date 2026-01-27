@@ -6,8 +6,8 @@
         <item name="android:windowBackground">@color/colorDark</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorMint2</item>
-        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <!--item name="colorPrimary">@color/colorMint2</item-->
+        <!--item name="colorPrimaryDark">@color/colorBlue</item-->
         <item name="colorAccent">@color/colorMint</item>
     </style>
 </resources>
