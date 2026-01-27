@@ -100,8 +100,22 @@ setTouchEventsEnabled(true);
 			black = prefs.getBoolean("black", false);
   visibleMode = prefs.getBoolean("visibleMode", false);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
-			color1 = Color.BLACK;
-			color2 = Color.BLACK;
+			//color1 = Color.BLACK;
+			//color2 = Color.BLACK;
+
+if (currentSurface != null) {
+            if (black) {
+                // «чёрные» включены → останавливаем отрисовку
+drawWallpaper(currentSurface);
+                //handler.removeCallbacksAndMessages(null);
+stopPreview();
+            } else {
+                // «чёрные» выключены → возобновляем отрисовку
+                handler.removeCallbacksAndMessages(null);   // чистим возможные старые задачи
+
+                handler.post(runnable(currentSurface));
+            }
+        }
 			prefs.registerOnSharedPreferenceChangeListener(prefListener);
         }
 
@@ -125,6 +139,7 @@ currentSurface = holder.getSurface();
   public void onVisibilityChanged(boolean visible) {
           super.onVisibilityChanged(visible);
 isVisible = visible;
+if (!visibleMode) return;
         if (visible) {
                 // возобновить анимацию / отрисовку
 if (currentSurface != null) {
@@ -132,7 +147,8 @@ if (currentSurface != null) {
             }
             } else {
                 // приостановить, экономим батарею
-handler.removeCallbacksAndMessages(null);
+//handler.removeCallbacksAndMessages(null);
+stopPreview();
             }
         }
 
@@ -165,7 +181,7 @@ currentSurface = holder.getSurface();
             return new Runnable() {
                 @Override
                 public void run() {
-if (!isVisible) return;
+if (!isVisible && visibleMode) return;
                     if (transitionProgress >= 1f) {
                         targetColor1 = targetColor2;
                         targetColor2 = targetColor3;
