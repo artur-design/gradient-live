@@ -17,7 +17,7 @@
         </activity>
 		
         <activity android:name=".SettingsActivity"
-			android:label="Настройки обоев"
+			android:label="@string/set"
 			android:theme="@style/Theme.TransparentDialog"
 			android:exported="true">
 			<intent-filter>
