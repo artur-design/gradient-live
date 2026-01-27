@@ -1,6 +1,5 @@
 package com.example.gradient;
 import androidx.appcompat.app.AppCompatActivity;
-//import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.app.WallpaperManager;
