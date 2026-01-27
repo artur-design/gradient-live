@@ -35,9 +35,6 @@
             <meta-data
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper"/>
-			<meta-data
-				android:name="android.service.wallpaper.settings"
-				android:value="com.example.gradient.SettingsActivity" />
         </service>
 
     </application>
