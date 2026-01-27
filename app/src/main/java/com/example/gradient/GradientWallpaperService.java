@@ -100,14 +100,11 @@ setTouchEventsEnabled(true);
 			black = prefs.getBoolean("black", false);
   visibleMode = prefs.getBoolean("visibleMode", false);
             transitionDuration = 1000 / screenRefreshRate; // Устанавливаем задержку в миллисекундах 
-			//color1 = Color.BLACK;
-			//color2 = Color.BLACK;
 
 if (currentSurface != null) {
             if (black) {
                 // «чёрные» включены → останавливаем отрисовку
 drawWallpaper(currentSurface);
-                //handler.removeCallbacksAndMessages(null);
 stopPreview();
             } else {
                 // «чёрные» выключены → возобновляем отрисовку
@@ -147,7 +144,6 @@ if (currentSurface != null) {
             }
             } else {
                 // приостановить, экономим батарею
-//handler.removeCallbacksAndMessages(null);
 stopPreview();
             }
         }
@@ -169,7 +165,7 @@ currentSurface = holder.getSurface();
 
 		public void startPreview(Surface surface) {
     		stopPreview(); // Останавливаем предыдущий предварительный просмотр, если он есть
-			if (black) drawWallpaper(surface);
+if(black) drawWallpaper(surface);
 			else handler.post(runnable(surface)); // Запускаем новый предварительный просмотр
 		}
 
