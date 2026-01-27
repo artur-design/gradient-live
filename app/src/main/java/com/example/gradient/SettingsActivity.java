@@ -1,7 +1,7 @@
 package com.example.gradient;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.os.Bundle;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
