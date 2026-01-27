@@ -49,6 +49,11 @@
     android:key="howToUse"
     android:title="@string/how_use"
     android:summary="@string/select_about" />
+
+<Preference
+    android:key="examples"
+    android:title="@string/examples"
+    android:summary="@string/some_examples" />
 </PreferenceCategory>
 
 
