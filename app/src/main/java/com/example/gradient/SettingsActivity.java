@@ -428,7 +428,7 @@ Preference examplesPreference = findPreference("examples");
 
 private void showExamplesDialog() {
                       AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(getString(R.string.some_exaples))
+                builder.setTitle(getString(R.string.some_examples))
             .setMessage(getString(R.string.list_example))
                         .setPositiveButton(getString(R.string.ok),new DialogInterface.OnClickListener() {
                          public void onClick(DialogInterface dialog, int id) {
