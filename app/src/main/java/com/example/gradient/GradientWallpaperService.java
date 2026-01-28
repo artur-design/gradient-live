@@ -261,8 +261,9 @@ transitionProgress += transitionStep;
                 	.setVariable("v", v);
 				
         			double result = exp.evaluate(); // Получаем результат как double
-        			int intResult = (int) result % 256; // Приводим результат к int с учетом переполнения
-        			return Math.max(intResult, 0); // Возвращаем 0, если результат отрицательный
+
+      int raw = (int) Math.round(result);
+                            return ((raw % 256) + 256) % 256;
     			} catch (Exception e) {
         			e.printStackTrace();
         			return 0; 
