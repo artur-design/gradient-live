@@ -367,8 +367,8 @@ Preference examplesPreference = findPreference("examples");
       			.setVariable("v", v);
 
     			double result = exp.evaluate();
-    			int intResult = (int) result % 256;
-    			return Math.max(intResult, 0);
+      int raw = (int) Math.round(result);
+    			return ((raw % 256) + 256) % 256;
   			} catch (Exception e) {
     			e.printStackTrace();
     			return -1;
