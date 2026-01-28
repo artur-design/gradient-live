@@ -39,7 +39,7 @@
     <string name="visible">Пауза, если скрыты</string>
     <string name="set_visible">Включить для экономии батареи</string>
 <string name="examples">Примеры</string>
-<string name="some_examples>Некоторые примеры для генерации цвета</string>
+<string name="some_examples">Некоторые примеры для генерации цвета</string>
 <string name="list_example">1. h = h + 1\n\n 2. h = random(min, max)\n\n 3.\n\n 4.</string>
     <string-array name="refresh_rate_entries" />
     <string-array name="refresh_rate_values" />
