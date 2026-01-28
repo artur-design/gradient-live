@@ -425,9 +425,8 @@ Preference examplesPreference = findPreference("examples");
       		AlertDialog dialog = builder.create();
       		dialog.show();
     	}
-  	}
 
-            private void showExamplesDialog() {
+private void showExamplesDialog() {
                       AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle(getString(R.string.some_exaples))
             .setMessage(getString(R.string.list_example))
@@ -439,5 +438,5 @@ Preference examplesPreference = findPreference("examples");
                       AlertDialog dialog = builder.create();
                       dialog.show();
             }
-          }
+  	}
 }
