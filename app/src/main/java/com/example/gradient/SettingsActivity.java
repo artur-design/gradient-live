@@ -178,6 +178,15 @@ CheckBoxPreference visibleWallpaperPreference = (CheckBoxPreference) findPrefere
       			}
     		});
 
+Preference examplesPreference = findPreference("examples");
+    		examplesPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+      			@Override
+      			public boolean onPreferenceClick(Preference preference) {
+        			showExamplesDialog();
+        			return true;
+      			}
+    		});
+
 			Preference colorGenerationRules = findPreference("colorGenerationRuless");
 			colorGenerationRules.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
     			@Override
@@ -417,4 +426,18 @@ CheckBoxPreference visibleWallpaperPreference = (CheckBoxPreference) findPrefere
       		dialog.show();
     	}
   	}
+
+            private void showExamplesDialog() {
+                      AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle(getString(R.string.some_exaples))
+            .setMessage(getString(R.string.list_example))
+                        .setPositiveButton(getString(R.string.ok),new DialogInterface.OnClickListener() {
+                         public void onClick(DialogInterface dialog, int id) {
+                                   dialog.dismiss();
+                         }
+                       });
+                      AlertDialog dialog = builder.create();
+                      dialog.show();
+            }
+          }
 }
