@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="err1">القيمة الدنيا لا يمكن أن تكون أكبر من القيمة العليا.</string>
-    <string name="refresh_rate">معدل التحديث</string>
-    <string name="current_rate">المعدل الحالي: </string>
-    <string name="current_frames">عدد الإطارات الحالي: </string>
-    <string name="err2">الرجاء إدخال رقم صالح</string>
-    <string name="err3">أدخل قيمة لا تقل عن 30</string>
-    <string name="current_coef">المعامل الحالي: </string>
-    <string name="direction">الاتجاه: </string>
-    <string name="select_direction">اختر الاتجاه</string>
-    <string name="err4">أدخل قيمة بين 1 و 5</string>
-    <string name="color_settings">إعدادات اللون</string>
+    <string name="err1">"القيمة الدنيا لا يمكن أن تكون أكبر من القيمة العليا."</string>
+    <string name="refresh_rate">"معدل التحديث"</string>
+    <string name="current_rate">"المعدل الحالي: "</string>
+    <string name="current_frames">"عدد الإطارات الحالي: "</string>
+    <string name="err2">"الرجاء إدخال رقم صحيح"</string>
+    <string name="err3">"الرجاء إدخال قيمة من 30"</string>
+    <string name="current_coef">"المعامل الحالي: "</string>
+    <string name="direction">"الاتجاه: "</string>
+    <string name="select_direction">"اختر الاتجاه"</string>
+    <string name="err4">"الرجاء إدخال قيمة من 1 إلى 5"</string>
+    <string name="color_settings">"إعدادات اللون"</string>
     <string name="save">حفظ</string>
     <string name="cancel">إلغاء</string>
-    <string name="def">افتراضي</string>
-    <string name="err5">استخدام المتغيرات h، s، v غير مسموح في وضع RGB.</string>
+    <string name="def">الإعداد الافتراضي</string>
+    <string name="err5">"استخدام المتغيرات h، s، v غير مسموح في وضع RGB."</string>
     <string name="error">خطأ</string>
-    <string name="err6">استخدام المتغيرات r، g، b غير مسموح في وضع HSV.</string>
-
-    <string name="about">gradient live – خلفية حية متدرجة. يوفّر تطبيق “gradient live” الإعدادات التالية:
-
-		1. معدل التحديث – اختر عدد الإطارات في الثانية، ويحده معدل تحديث شاشة جهازك.
-		2. عدد الإطارات – حدّد عدد إطارات التدرج (الحد الأدنى 30)، وهو ما يؤثر على السرعة والسلاسة.
-		3. معامل طول التدرج – اختر طول التدرج بوحدات الشاشة (عدد صحيح أو عشري من 1 إلى 5)، وهو ما يؤثر على السرعة والحدة.
-		4. اتجاه الحركة – اختر اتجاه حركة التدرج. إذا اخترت “المركز” فلن يكون هناك تدرج، بل سيظهر لون موحد يتغيّر بسلاسة وفق إعداداتك.
-		5. قواعد توليد اللون – عرّف كيفية توليد اللون التالي. المتغيّرات المتاحة: r، g، b، h، s، v، random()، random(max)، random(min, max)؛ أرقام (بما فيها الكسور)؛ عمليات ‘+’، ‘-’، ‘*’، ‘/’، ‘%’؛ وأقواس ‘(’ و ‘)’ . أي تعبير يحتوي على أحرف أخرى أو لا يمكن تقييمه من المرة الأولى لن يُحفظ. إذا فشل التقييم لاحقًا، تُعيد الدالة القيمة 0.</string>
-
+    <string name="err6">"استخدام المتغيرات r، g، b غير مسموح في وضع HSV."</string>
+    <string name="about">"Gradient live - خلفيات متدرجة حية. النقر المزدوج على الخلفية يفتح الإعدادات. التطبيق يتيح الإعدادات التالية:\n\n1. معدل التحديث. يمكنك اختيار عدد الإطارات، والحد الأقصى هو معدل تحديث شاشة هاتفك.\n\n2. عدد الإطارات. يمكنك إدخال عدد إطارات المتدرجة من 30، وهذا يؤثر على سرعة وسلاسة الحركة.\n\n3. معامل طول المتدرجة. يمكنك اختيار طول المتدرجة بعدد شاشات، بإدخال عدد صحيح أو كسري من 1 إلى 5، وهذا يؤثر على سرعة وحدة المتدرجة.\n\n4. اتجاه الحركة. في هذا القسم يمكنك اختيار اتجاه حركة المتدرجة. إذا اخترت المركز، لن تكون هناك متدرجة، بل سيتغير لون الشاشة بالكامل بسلاسة وفق إعداداتك.\n\n5. في قواعد توليد اللون تحدد نمط توليد اللون التالي. المتاح المتغيرات: r، g، b، h، s، v، random()، random(max)، random(min, max)؛ الأرقام بما فيها الكسور؛ العمليات: '+'، '-'، '*'، '/'، '%'؛ والأقواس '(' و ')'. إذا احتوت الصيغة على شيء غير ذلك أو فشلت في التنفيذ حتى في المرة الأولى، لن تُحفظ. إذا فشلت في التنفيذ لاحقًا، ستعيد الدالة القيمة 0.\n\n6. لتوفير الطاقة يمكنك تشغيل الخلفية السوداء أو وضع الإيقاف المؤقت إذا كانت الخلفية مغطاة بتطبيقات أخرى."</string>
     <string name="ok">حسناً</string>
     <string name="how_use">كيفية الاستخدام</string>
-    <string name="hz"> Hz</string>
-    <string name="set">إعداد</string>
-    <string name="install">الانتقال إلى التثبيت</string>
-    <string name="settings">إعدادات التدرج</string>
+    <string name="hz"> هرتز</string>
+    <string name="set">إعدادات الخلفية</string>
+    <string name="settings">إعدادات المتدرجة</string>
     <string name="about_app">عن التطبيق</string>
-    <string name="select_about">اضغط لمعرفة كيفية استخدام التطبيق.</string>
-    <string name="coef">معامل طول التدرج</string>
+    <string name="select_about">اضغط لمعرفة كيفية استخدام التطبيق</string>
+    <string name="coef">معامل طول المتدرجة</string>
     <string name="frames">عدد الإطارات</string>
     <string name="movement_direction">اتجاه الحركة</string>
     <string name="color_generation">قواعد توليد اللون</string>
-    <string name="set_color_gen">ضبط قواعد توليد اللون</string>
+    <string name="set_color_gen">اضبط قواعد توليد اللون</string>
     <string name="battery">توفير الطاقة</string>
     <string name="black">خلفية سوداء</string>
     <string name="set_black">تفعيل الخلفية السوداء</string>
+    <string name="visible">إيقاف مؤقت إذا كانت مخفية</string>
+    <string name="set_visible">تفعيل لتوفير الطاقة</string>
+    <string name="examples">أمثلة</string>
+    <string name="some_examples">بعض الأمثلة لتوليد اللون</string>
+    <string name="list_example">1. h = h + 1\nالنتيجة: h يزداد بمقدار 1 في كل مرة، وعند الوصول إلى 255 يعاد إلى الصفر. بالمثل مع الصيغة h = h - 1\n\n2. h = random(min, max)\nالنتيجة: h سيأخذ قيمة عشوائية بين min و max (استبدلهما بالرقم أو المتغير). ملاحظة: random(max) = random(0, max)، random() = random(0, 255).\n\n3. المهمة: تحتاج إلى h = 50، ثم 100، ثم مرة أخرى 50.\nالحل: في البداية ضع h = 50 أو h = 100، ثم احسب: 50 + 100 = 150، ثم ضع h = 150 - h\n\nهذه مجرد بعض الأمثلة؛ يمكنك إنشاء صيغ أكثر تعقيدًا وإثارة.</string>
 </resources>
-
