@@ -20,6 +20,7 @@ import android.content.SharedPreferences;
 import android.view.WindowManager;
 import android.view.Display;
 import android.graphics.Color;
+import androidx.core.content.ContextCompat;
 import android.content.DialogInterface;
 import android.widget.EditText;
 import android.widget.RadioButton;
