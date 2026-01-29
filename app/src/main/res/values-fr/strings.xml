@@ -1,43 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="err1">"La valeur minimale ne peut pas être supérieure à la valeur maximale."</string>
-    <string name="refresh_rate">"Fréquence de rafraîchissement"</string>
-    <string name="current_rate">"Fréquence actuelle : "</string>
-    <string name="current_frames">"Nombre actuel d'images : "</string>
-    <string name="err2">"Veuillez saisir un nombre valide"</string>
-    <string name="err3">"Veuillez saisir une valeur d'au moins 30"</string>
-    <string name="current_coef">"Coefficient actuel : "</string>
-    <string name="direction">"Direction : "</string>
-    <string name="select_direction">"Sélectionner la direction"</string>
-    <string name="err4">"Veuillez saisir une valeur entre 1 et 5"</string>
-    <string name="color_settings">"Paramètres de couleur"</string>
-    <string name="save">Enregistrer</string>
-    <string name="cancel">Annuler</string>
-    <string name="def">Par défaut</string>
-    <string name="err5">"L'utilisation des variables h, s, v n'est pas autorisée en mode RVB."</string>
-    <string name="error">Erreur</string>
-    <string name="err6">"L'utilisation des variables r, g, b n'est pas autorisée en mode HSV."</string>
-
-    <string name="about">"Gradient live – fonds d'écran à dégradés animés. Un double‑tap sur le fond ouvre les paramètres. L'application propose les options suivantes :\n\n1. Fréquence de rafraîchissement. Choisissez le nombre d'images par seconde, limité par la fréquence d'affichage de votre téléphone.\n\n2. Nombre d'images. Saisissez le nombre d'images du dégradé (minimum 30), ce qui influence la vitesse et la fluidité du mouvement.\n\n3. Coefficient de longueur du dégradé. Définissez la longueur du dégradé en unités d'écran en entrant un nombre entier ou décimal de 1 à 5, ce qui affecte la vitesse et la netteté du dégradé.\n\n4. Direction du mouvement. Sélectionnez la direction du déplacement du dégradé. En choisissant « centre », il n’y a pas de dégradé ; l’écran entier affiche une couleur unique qui change doucement selon vos réglages.\n\n5. Les règles de génération de couleur permettent de définir le modèle du prochain couleur. Variables disponibles : r, g, b, h, s, v, random(), random(max), random(min, max) ; nombres (y compris décimaux) ; opérateurs : '+', '-', '*', '/', '%' ; et parenthèses '(' et ')'. Si l’expression contient autre chose ou échoue dès la première exécution, elle ne sera pas enregistrée. Si elle échoue plus tard, la fonction renvoie 0.\n\n6. Pour économiser la batterie, vous pouvez activer un fond noir ou mettre en pause le fond lorsqu’il est recouvert par d’autres applications."</string>
-
-    <string name="ok">OK</string>
-    <string name="how_use">Comment utiliser</string>
-    <string name="hz"> Hz</string>
-    <string name="set">Paramètres du fond d'écran</string>
-    <string name="settings">Paramètres du dégradé</string>
-    <string name="about_app">À propos de l'application</string>
-    <string name="select_about">Appuyez pour savoir comment utiliser l'application</string>
-    <string name="coef">Coefficient de longueur du dégradé</string>
-    <string name="frames">Nombre d'images</string>
-    <string name="movement_direction">Direction du mouvement</string>
-    <string name="color_generation">Règles de génération de couleur</string>
-    <string name="set_color_gen">Définir les règles de génération de couleur</string>
-    <string name="battery">Économie d'énergie</string>
-    <string name="black">Fond noir</string>
-    <string name="set_black">Activer le fond noir</string>
-    <string name="visible">Pause lorsque masqué</string>
-    <string name="set_visible">Activer pour économiser la batterie</string>
-    <string name="examples">Exemples</string>
-    <string name="some_examples">Quelques exemples de génération de couleur</string>
-    <string name="list_example">1. h = h + 1\nRésultat : h augmente de 1 à chaque itération et revient à 0 après 255. De même, h = h - 1.\n\n2. h = random(min, max)\nRésultat : h prend une valeur aléatoire entre min et max (remplacez min et max par des nombres ou des variables). Remarque : random(max) = random(0, max), random() = random(0, 255).\n\n3. Tâche : vous avez besoin de h = 50, puis 100, puis de nouveau 50.\nSolution : commencez par h = 50 ou h = 100, puis calculez : 50 + 100 = 150 et définissez h = 150 - h.\n\nCe ne sont que quelques exemples ; vous pouvez créer des formules plus complexes et imprévisibles."</string>
-</resources>
+<string name="err1">"La valeur minimale ne peut pas être supérieure à la valeur maximale."</string>
+<string name="refresh_rate">"Fréquence de rafraîchissement"</string>
+<string name="current_rate">"Fréquence actuelle : "</string>
+<string name="current_frames">"Nombre actuel d'images : "</string>
+<string name="err2">"Veuillez saisir un nombre valide"</string>
+<string name="err3">"Veuillez saisir une valeur à partir de 30"</string>
+<string name="current_coef">"Coefficient actuel : "</string>
+<string name="direction">"Direction : "</string>
+<string name="select_direction">"Sélectionnez la direction"</string>
+<string name="err4">"Veuillez saisir une valeur entre 1 et 5"</string>
+<string name="color_settings">"Paramètres de couleur"</string>
+<string name="save">Enregistrer</string>
+<string name="cancel">Annuler</string>
+<string name="def">Par défaut</string>
+<string name="err5">"L'utilisation des variables h, s, v n'est pas autorisée en mode RVB."</string>
+<string name="error">Erreur</string>
+<string name="err6">"L'utilisation des variables r, g, b n'est pas autorisée en mode HSV."</string>
+<string name="about">"Gradient live – ce sont des fonds d'écran à dégradé animé. Un double‑tap sur le fond ouvre les paramètres. L'application propose les réglages suivants :\n\n1. Fréquence de rafraîchissement. Vous pouvez choisir le nombre d'images par seconde, limité par la fréquence d'affichage de votre téléphone.\n\n2. Nombre d'images. Vous pouvez définir le nombre d'images du dégradé à partir de 30, ce qui influence la vitesse et la fluidité du mouvement.\n\n3. Coefficient de longueur du dégradé. Vous pouvez choisir la longueur du dégradé en écrans, en saisissant un nombre entier ou décimal entre 1 et 5, ce qui affecte la vitesse et la netteté du dégradé.\n\n4. Direction du mouvement. Vous pouvez choisir la direction du déplacement du dégradé. Si vous choisissez « centre », il n’y aura pas de dégradé ; l’écran affichera une couleur unique qui changera progressivement selon vos réglages.\n\n5. Règles de génération des couleurs. Vous définissez la logique de génération de la couleur suivante. Les variables disponibles sont : r, g, b, h, s, v, random(), random(max), random(min, max) ; les nombres, y compris décimaux ; les opérateurs « + », « - », « * », « / », « % » ; ainsi que les parenthèses « ( ) ». Si l’expression contient autre chose ou ne peut pas être évaluée dès le premier appel, elle ne sera pas enregistrée. Si elle échoue plus tard, la fonction renverra 0.\n\n6. Pour économiser la batterie, vous pouvez activer le fond noir ou la pause lorsque le fond est recouvert par d’autres applications.""</string>
+<string name="ok">OK</string>
+<string name="how_use">Comment l'utiliser</string>
+<string name="hz"> Hz</string>
+<string name="set">Paramètres du fond d'écran</string>
+<string name="settings">Paramètres du dégradé</string>
+<string name="about_app">À propos de l'application</string>
+<string name="select_about">Appuyez pour découvrir comment utiliser l'application</string>
+<string name="coef">Coefficient de longueur du dégradé</string>
+<string name="frames">Nombre d'images</string>
+<string name="movement_direction">Direction du mouvement</string>
+<string name="color_generation">Règles de génération des couleurs</string>
+<string name="set_color_gen">Définissez les règles de génération des couleurs</string>
+<string name="battery">Économie de batterie</string>
+<string name="black">Fond noir</string>
+<string name="set_black">Activer le fond noir</string>
+<string name="visible">Pause si masqué</string>
+<string name="set_visible">Activer pour économiser la batterie</string>
+<string name="examples">Exemples</string>
+<string name="some_examples">Quelques exemples de génération de couleur</string>
+<string name="list_example">1. h = h + 1\nRésultat : h augmente de 1 à chaque itération et revient à 0 lorsqu’il atteint 255. Idem avec h = h - 1.\n\n2. h = random(min, max)\nRésultat : h prend une valeur aléatoire entre min et max (remplacez‑les par un nombre ou une variable). Astuce : random(max) = random(0, max), random() = random(0, 255).\n\n3. Objectif : h = 50, puis 100, puis de nouveau 50.\nSolution : commencez par h = 50 ou h = 100, puis calculez : 50 + 100 = 150, ensuite définissez h = 150 - h.\n\nCe ne sont que quelques exemples ; vous pouvez créer des formules plus complexes et imprévisibles.""</string>
