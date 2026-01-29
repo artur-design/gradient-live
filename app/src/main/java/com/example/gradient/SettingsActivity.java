@@ -416,9 +416,15 @@ int mintColor = ContextCompat.getColor(requireContext(), R.color.colorMint);
 		}
 
     	private void showHowToUseDialog() {
+TextView tv = new TextView(getActivity());
+    tv.setText(getString(R.string.about));
+    tv.setTextSize(16);
+    tv.setPadding(24, 24, 24, 24);
+    tv.setAutoLinkMask(Linkify.WEB_URLS);
+    tv.setMovementMethod(LinkMovementMethod.getInstance());
       		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         	builder.setTitle(getString(R.string.how_use))
-            .setMessage(getString(R.string.about))
+            .setView(tv)
 			.setPositiveButton(getString(R.string.ok),new DialogInterface.OnClickListener() {
          		public void onClick(DialogInterface dialog, int id) {
            			dialog.dismiss();
