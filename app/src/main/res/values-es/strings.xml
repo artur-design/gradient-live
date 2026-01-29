@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="err1">El valor mínimo no puede ser mayor que el máximo.</string>
-    <string name="refresh_rate">Frecuencia de actualización</string>
-    <string name="current_rate">Frecuencia actual: </string>
-    <string name="current_frames">Número de fotogramas actual: </string>
-    <string name="err2">Introduzca un número válido</string>
-    <string name="err3">Introduzca un valor de al menos 30</string>
-    <string name="current_coef">Coeficiente actual: </string>
-    <string name="direction">Dirección: </string>
-    <string name="select_direction">Seleccionar dirección</string>
-    <string name="err4">Introduzca un valor entre 1 y 5</string>
-    <string name="color_settings">Ajustes de color</string>
+    <string name="err1">"El valor mínimo no puede ser mayor que el máximo."</string>
+    <string name="refresh_rate">"Frecuencia de actualización"</string>
+    <string name="current_rate">"Frecuencia actual: "</string>
+    <string name="current_frames">"Cantidad actual de fotogramas: "</string>
+    <string name="err2">"Por favor, introduzca un número válido"</string>
+    <string name="err3">"Por favor, introduzca un valor de al menos 30"</string>
+    <string name="current_coef">"Coeficiente actual: "</string>
+    <string name="direction">"Dirección: "</string>
+    <string name="select_direction">"Seleccionar dirección"</string>
+    <string name="err4">"Por favor, introduzca un valor entre 1 y 5"</string>
+    <string name="color_settings">"Ajustes de color"</string>
     <string name="save">Guardar</string>
     <string name="cancel">Cancelar</string>
     <string name="def">Predeterminado</string>
-    <string name="err5">El uso de las variables h, s, v no está permitido en modo RGB.</string>
+    <string name="err5">"El uso de las variables h, s, v no está permitido en modo RGB."</string>
     <string name="error">Error</string>
-    <string name="err6">El uso de las variables r, g, b no está permitido en modo HSV.</string>
-
-    <string name="about">gradient live – un fondo de pantalla animado con gradientes. La aplicación “gradient live” ofrece los siguientes ajustes:
-
-		1. Frecuencia de actualización – elija la frecuencia de fotogramas, limitada por la frecuencia de actualización de la pantalla de su dispositivo.
-		2. Número de fotogramas – establezca la cantidad de fotogramas del gradiente (mínimo 30), lo que afecta la velocidad y la fluidez.
-		3. Coeficiente de longitud del gradiente – seleccione la longitud del gradiente en pantallas (número entero o decimal de 1 a 5), lo que influye en la velocidad y la nitidez.
-		4. Dirección del movimiento – elija la dirección del desplazamiento del gradiente. Si selecciona “centro”, no habrá gradiente; toda la pantalla mostrará un solo color que cambiará suavemente según sus ajustes.
-		5. Reglas de generación de color – defina cómo se genera el siguiente color. Variables disponibles: r, g, b, h, s, v, random(), random(max), random(min, max); números (incluidos decimales); operadores ‘+’, ‘-’, ‘*’, ‘/’, ‘%’; y paréntesis ‘(’, ‘)’. Cualquier expresión que contenga caracteres distintos o que no pueda evaluarse en el primer intento no se guardará. Si falla en evaluaciones posteriores, la función devolverá 0.</string>
-	
+    <string name="err6">"El uso de las variables r, g, b no está permitido en modo HSV."</string>
+    <string name="about">"Gradient live – fondos de pantalla con degradados vivos. Doble toque en el fondo abre la configuración. La aplicación ofrece las siguientes opciones:\n\n1. Frecuencia de actualización. Aquí puede elegir la tasa de fotogramas, limitada por la frecuencia de refresco de la pantalla de su teléfono.\n\n2. Cantidad de fotogramas. Introduzca el número de fotogramas del degradado (mínimo 30), lo que afecta la velocidad y la suavidad del movimiento.\n\n3. Coeficiente de longitud del degradado. Elija la longitud del degradado en unidades de pantalla introduciendo un número entero o decimal de 1 a 5, lo que influye en la velocidad y nitidez del degradado.\n\n4. Dirección del movimiento. Seleccione la dirección del movimiento del degradado. Si elige “centro”, no habrá degradado; toda la pantalla mostrará un solo color que cambiará suavemente según sus ajustes.\n\n5. En las reglas de generación de color define el patrón para el siguiente color. Variables disponibles: r, g, b, h, s, v, random(), random(max), random(min, max); números (incluidos decimales); operadores: '+', '-', '*', '/', '%'; y paréntesis '(' y ')'. Si la expresión contiene algo distinto o falla en la primera ejecución, no se guardará. Si falla posteriormente, la función devolverá 0.\n\n6. Para ahorrar batería puede activar fondos negros o pausa cuando el fondo está cubierto por otras aplicaciones."</string>
     <string name="ok">OK</string>
     <string name="how_use">Cómo usar</string>
-    <string name="hz"> Hz</string>
-    <string name="set">Configurar</string>
-    <string name="install">Ir a la instalación</string>
-    <string name="settings">Ajustes del gradiente</string>
+    <string name="hz"> Hz</string>
+    <string name="set">Ajustes del fondo</string>
+    <string name="settings">Ajustes del degradado</string>
     <string name="about_app">Acerca de la aplicación</string>
-    <string name="select_about">Toque para aprender a usar la aplicación.</string>
-    <string name="coef">Coeficiente de longitud del gradiente</string>
-    <string name="frames">Número de fotogramas</string>
+    <string name="select_about">Toque para aprender a usar la aplicación</string>
+    <string name="coef">Coeficiente de longitud del degradado</string>
+    <string name="frames">Cantidad de fotogramas</string>
     <string name="movement_direction">Dirección del movimiento</string>
     <string name="color_generation">Reglas de generación de color</string>
-    <string name="set_color_gen">Establecer reglas para la generación de color</string>
+    <string name="set_color_gen">Establecer reglas de generación de color</string>
     <string name="battery">Ahorro de batería</string>
     <string name="black">Fondo negro</string>
     <string name="set_black">Activar fondo negro</string>
+    <string name="visible">Pausa cuando está oculto</string>
+    <string name="set_visible">Activar para ahorrar batería</string>
+    <string name="examples">Ejemplos</string>
+    <string name="some_examples">Algunos ejemplos para la generación de color</string>
+    <string name="list_example">1. h = h + 1\nResultado: h se incrementa en 1 cada vez y se reinicia a 0 al llegar a 255. De forma similar, h = h - 1.\n\n2. h = random(min, max)\nResultado: h toma un valor aleatorio entre min y max (reemplazar min y max por números o variables). Nota: random(max) = random(0, max), random() = random(0, 255).\n\n3. Tarea: necesita h = 50, luego 100 y después volver a 50.\nSolución: establezca h = 50 o h = 100, luego calcule: 50 + 100 = 150 y establezca h = 150 - h.\n\nEstos son solo algunos ejemplos; puede crear fórmulas más complejas e impredecibles.</string>
 </resources>
-
