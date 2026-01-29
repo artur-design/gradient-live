@@ -212,7 +212,8 @@ Preference examplesPreference = findPreference("examples");
       			if (child instanceof Button) {
         			final Button button = (Button) child;
         		// Подсвечиваем кнопку, если ее текст совпадает с сохраненным направлением
-        			if (button.getText().toString().equals(savedDirection)) button.setBackgroundColor(R.color.colorMint);
+        			if (button.getText().toString().equals(savedDirection))
+int mintColor = ContextCompat.getColor(requireContext(), R.color.colorMint); button.setBackgroundColor(mintColor);
         			button.setOnClickListener(new View.OnClickListener() {
           				@Override
           				public void onClick(View v) {
