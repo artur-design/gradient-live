@@ -422,6 +422,7 @@ TextView tv = new TextView(getActivity());
     tv.setText(getString(R.string.about));
     tv.setTextSize(16);
     tv.setPadding(24, 24, 24, 24);
+tv.setTextColor(Color.WHITE);
     tv.setAutoLinkMask(Linkify.WEB_URLS);
     tv.setMovementMethod(LinkMovementMethod.getInstance());
       		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
