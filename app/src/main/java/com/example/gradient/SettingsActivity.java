@@ -211,9 +211,9 @@ Preference examplesPreference = findPreference("examples");
       			View child = gridLayout.getChildAt(i);
       			if (child instanceof Button) {
         			final Button button = (Button) child;
+int mintColor = ContextCompat.getColor(requireContext(), R.color.colorMint);
         		// Подсвечиваем кнопку, если ее текст совпадает с сохраненным направлением
-        			if (button.getText().toString().equals(savedDirection))
-int mintColor = ContextCompat.getColor(requireContext(), R.color.colorMint); button.setBackgroundColor(mintColor);
+        			if (button.getText().toString().equals(savedDirection)) button.setBackgroundColor(mintColor);
         			button.setOnClickListener(new View.OnClickListener() {
           				@Override
           				public void onClick(View v) {
