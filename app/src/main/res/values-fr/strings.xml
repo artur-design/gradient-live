@@ -17,7 +17,7 @@
 <string name="err5">"L'utilisation des variables h, s, v n'est pas autorisée en mode RVB."</string>
 <string name="error">Erreur</string>
 <string name="err6">"L'utilisation des variables r, g, b n'est pas autorisée en mode HSV."</string>
-<string name="about">"Gradient live – ce sont des fonds d'écran à dégradé animé. Un double‑tap sur le fond ouvre les paramètres. L'application propose les réglages suivants :\n\n1. Fréquence de rafraîchissement. Vous pouvez choisir le nombre d'images par seconde, limité par la fréquence d'affichage de votre téléphone.\n\n2. Nombre d'images. Vous pouvez définir le nombre d'images du dégradé à partir de 30, ce qui influence la vitesse et la fluidité du mouvement.\n\n3. Coefficient de longueur du dégradé. Vous pouvez choisir la longueur du dégradé en écrans, en saisissant un nombre entier ou décimal entre 1 et 5, ce qui affecte la vitesse et la netteté du dégradé.\n\n4. Direction du mouvement. Vous pouvez choisir la direction du déplacement du dégradé. Si vous choisissez « centre », il n’y aura pas de dégradé ; l’écran affichera une couleur unique qui changera progressivement selon vos réglages.\n\n5. Règles de génération des couleurs. Vous définissez la logique de génération de la couleur suivante. Les variables disponibles sont : r, g, b, h, s, v, random(), random(max), random(min, max) ; les nombres, y compris décimaux ; les opérateurs « + », « - », « * », « / », « % » ; ainsi que les parenthèses « ( ) ». Si l’expression contient autre chose ou ne peut pas être évaluée dès le premier appel, elle ne sera pas enregistrée. Si elle échoue plus tard, la fonction renverra 0.\n\n6. Pour économiser la batterie, vous pouvez activer le fond noir ou la pause lorsque le fond est recouvert par d’autres applications."</string>
+
 <string name="ok">OK</string>
 <string name="how_use">Comment l'utiliser</string>
 <string name="hz"> Hz</string>
@@ -37,5 +37,4 @@
 <string name="set_visible">Activer pour économiser la batterie</string>
 <string name="examples">Exemples</string>
 <string name="some_examples">Quelques exemples de génération de couleur</string>
-<string name="list_example">1. h = h + 1\nRésultat : h augmente de 1 à chaque itération et revient à 0 lorsqu’il atteint 255. Idem avec h = h - 1.\n\n2. h = random(min, max)\nRésultat : h prend une valeur aléatoire entre min et max (remplacez‑les par un nombre ou une variable). Astuce : random(max) = random(0, max), random() = random(0, 255).\n\n3. Objectif : h = 50, puis 100, puis de nouveau 50.\nSolution : commencez par h = 50 ou h = 100, puis calculez : 50 + 100 = 150, ensuite définissez h = 150 - h.\n\nCe ne sont que quelques exemples ; vous pouvez créer des formules plus complexes et imprévisibles.</string>
 </resources>
