@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 <string name="err1">"La valeur minimale ne peut pas être supérieure à la valeur maximale."</string>
 <string name="refresh_rate">"Fréquence de rafraîchissement"</string>
 <string name="current_rate">"Fréquence actuelle : "</string>
@@ -36,3 +38,4 @@
 <string name="examples">Exemples</string>
 <string name="some_examples">Quelques exemples de génération de couleur</string>
 <string name="list_example">1. h = h + 1\nRésultat : h augmente de 1 à chaque itération et revient à 0 lorsqu’il atteint 255. Idem avec h = h - 1.\n\n2. h = random(min, max)\nRésultat : h prend une valeur aléatoire entre min et max (remplacez‑les par un nombre ou une variable). Astuce : random(max) = random(0, max), random() = random(0, 255).\n\n3. Objectif : h = 50, puis 100, puis de nouveau 50.\nSolution : commencez par h = 50 ou h = 100, puis calculez : 50 + 100 = 150, ensuite définissez h = 150 - h.\n\nCe ne sont que quelques exemples ; vous pouvez créer des formules plus complexes et imprévisibles.""</string>
+</resources>
