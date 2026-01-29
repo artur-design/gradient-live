@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="err1">Der Minimalwert darf nicht größer als der Maximalwert sein.</string>
-    <string name="refresh_rate">Bildwiederholrate</string>
-    <string name="current_rate">Aktuelle Rate: </string>
-    <string name="current_frames">Aktuelle Bildanzahl: </string>
-    <string name="err2">Bitte geben Sie eine gültige Zahl ein</string>
-    <string name="err3">Geben Sie einen Wert von mindestens 30 ein</string>
-    <string name="current_coef">Aktueller Koeffizient: </string>
-    <string name="direction">Richtung: </string>
-    <string name="select_direction">Richtung auswählen</string>
-    <string name="err4">Geben Sie einen Wert zwischen 1 und 5 ein</string>
-    <string name="color_settings">Farbeinstellungen</string>
+    <string name="err1">"Mindestwert darf nicht größer als Maximalwert sein."</string>
+    <string name="refresh_rate">"Aktualisierungsrate"</string>
+    <string name="current_rate">"Aktuelle Rate: "</string>
+    <string name="current_frames">"Aktuelle Bildanzahl: "</string>
+    <string name="err2">"Bitte geben Sie eine gültige Zahl ein"</string>
+    <string name="err3">"Bitte geben Sie einen Wert ab 30 ein"</string>
+    <string name="current_coef">"Aktueller Koeffizient: "</string>
+    <string name="direction">"Richtung: "</string>
+    <string name="select_direction">"Richtung auswählen"</string>
+    <string name="err4">"Bitte geben Sie einen Wert von 1 bis 5 ein"</string>
+    <string name="color_settings">"Farbeinstellungen"</string>
     <string name="save">Speichern</string>
     <string name="cancel">Abbrechen</string>
     <string name="def">Standard</string>
-    <string name="err5">Die Verwendung der Variablen h, s, v ist im RGB‑Modus nicht erlaubt.</string>
+    <string name="err5">"Verwendung der Variablen h, s, v ist im RGB‑Modus nicht erlaubt."</string>
     <string name="error">Fehler</string>
-    <string name="err6">Die Verwendung der Variablen r, g, b ist im HSV‑Modus nicht erlaubt.</string>
-
-    <string name="about">gradient live – ein Live‑Gradient‑Wallpaper. Die App „gradient live“ bietet folgende Einstellungen:
-
-		1. Bildwiederholrate – wählen Sie die Bildrate, begrenzt durch die Bildwiederholrate Ihres Bildschirms.
-		2. Bildanzahl – legen Sie die Anzahl der Gradient‑Frames fest (mindestens 30), was Geschwindigkeit und Glätte beeinflusst.
-		3. Gradient‑Längen‑Koeffizient – wählen Sie die Gradient‑Länge in Bildschirmen (Ganzzahl oder Dezimalzahl von 1 bis 5), was Geschwindigkeit und Schärfe beeinflusst.
-		4. Bewegungsrichtung – wählen Sie die Richtung des Gradient‑Verschiebens. Wird „Mitte“ gewählt, gibt es keinen Gradient, sondern der gesamte Bildschirm zeigt eine einheitliche Farbe, die sich gemäß Ihren Einstellungen sanft ändert.
-		5. Farb‑Generierungsregeln – definieren Sie, wie die nächste Farbe erzeugt wird. Verfügbare Variablen: r, g, b, h, s, v, random(), random(max), random(min, max); Zahlen (auch Dezimalzahlen); Operatoren ‘+’, ‘-’, ‘*’, ‘/’, ‘%’; und Klammern ‘(’, ‘)’. Jede Ausdruck, der andere Zeichen enthält oder beim ersten Mal nicht ausgewertet werden kann, wird nicht gespeichert. Schlägt die Auswertung später fehl, gibt die Funktion 0 zurück.</string>
-
+    <string name="err6">"Verwendung der Variablen r, g, b ist im HSV‑Modus nicht erlaubt."</string>
+    <string name="about">"Gradient live – lebende Farbverlauf‑Hintergründe. Doppeltippen auf das Hintergrundbild öffnet die Einstellungen. Die App bietet folgende Optionen:\n\n1. Aktualisierungsrate. Hier können Sie die Bildrate wählen, maximal begrenzt durch die Bildwiederholrate Ihres Telefons.\n\n2. Bildanzahl. Geben Sie die Anzahl der Frames des Farbverlaufs ab 30 ein, was Geschwindigkeit und Glätte der Bewegung beeinflusst.\n\n3. Koeffizient der Verlaufs‑Länge. Wählen Sie die Länge des Verlaufs in Bildschirm‑Einheiten, indem Sie eine ganze oder dezimale Zahl von 1 bis 5 eingeben – das wirkt sich auf Geschwindigkeit und Schärfe des Verlaufs aus.\n\n4. Bewegungsrichtung. Hier können Sie die Richtung des Farbverlaufs festlegen. Wählen Sie „Mitte“, gibt es keinen Verlauf, sondern der gesamte Bildschirm zeigt eine einheitliche Farbe, die sich sanft gemäß Ihren Einstellungen ändert.\n\n5. In den Farb‑Generierungsregeln bestimmen Sie das Muster für die nächste Farbe. Verfügbare Variablen: r, g, b, h, s, v, random(), random(max), random(min, max); Zahlen, auch Dezimalzahlen; Operatoren: '+', '-', '*', '/', '%'; sowie Klammern '(' und ')'. Enthält der Ausdruck etwas anderes oder lässt er sich beim ersten Mal nicht ausführen, wird er nicht gespeichert. Schlägt die Ausführung später fehl, liefert die Funktion den Wert 0.\n\n6. Zur Batterieeinsparung können Sie schwarze Hintergründe oder eine Pause aktivieren, wenn das Hintergrundbild von anderen Apps überdeckt wird."</string>
     <string name="ok">OK</string>
-    <string name="how_use">Wie man es benutzt</string>
-    <string name="hz"> Hz</string>
-    <string name="set">Konfigurieren</string>
-    <string name="install">Zur Installation gehen</string>
-    <string name="settings">Gradient‑Einstellungen</string>
+    <string name="how_use">Wie man benutzt</string>
+    <string name="hz"> Hz</string>
+    <string name="set">Hintergrundeinstellungen</string>
+    <string name="settings">Verlaufseinstellungen</string>
     <string name="about_app">Über die App</string>
-    <string name="select_about">Tippen Sie, um zu erfahren, wie die App verwendet wird.</string>
-    <string name="coef">Gradient‑Längen‑Koeffizient</string>
-    <string name="frames">Bildanzahl</string>
+    <string name="select_about">Tippen, um zu erfahren, wie die App verwendet wird</string>
+    <string name="coef">Koeffizient der Verlaufs‑Länge</string>
+    <string name="frames">Anzahl der Frames</string>
     <string name="movement_direction">Bewegungsrichtung</string>
-    <string name="color_generation">Farb‑Generierungsregeln</string>
-    <string name="set_color_gen">Regeln für die Farb‑Generierung festlegen</string>
-    <string name="battery">Energiesparmodus</string>
-    <string name="black">Schwarzes Wallpaper</string>
-    <string name="set_black">Schwarzes Wallpaper aktivieren</string>
+    <string name="color_generation">Regeln zur Farbgenerierung</string>
+    <string name="set_color_gen">Regeln zur Farbgenerierung festlegen</string>
+    <string name="battery">Energie sparen</string>
+    <string name="black">Schwarzer Hintergrund</string>
+    <string name="set_black">Schwarzen Hintergrund aktivieren</string>
+    <string name="visible">Pause, wenn verborgen</string>
+    <string name="set_visible">Zur Energieeinsparung aktivieren</string>
+    <string name="examples">Beispiele</string>
+    <string name="some_examples">Einige Beispiele zur Farbgenerierung</string>
+    <string name="list_example">1. h = h + 1\nErgebnis: h erhöht sich jedes Mal um 1 und bei Erreichen von 255 wird auf 0 zurückgesetzt. Ähnlich funktioniert h = h - 1.\n\n2. h = random(min, max)\nErgebnis: h nimmt einen zufälligen Wert zwischen min und max an (ersetzen Sie min bzw. max durch Zahlen oder Variablen). Hinweis: random(max) = random(0, max), random() = random(0, 255).\n\n3. Aufgabe: Sie benötigen h = 50, dann 100 und danach wieder 50.\nLösung: Setzen Sie zunächst h = 50 oder h = 100, dann berechnen Sie: 50 + 100 = 150 und setzen anschließend h = 150 - h.\n\nDies sind nur einige Beispiele; Sie können komplexere und unvorhersehbare Formeln erstellen.</string>
 </resources>
-
