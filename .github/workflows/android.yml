@@ -1,34 +1,21 @@
-name: Build Android APK
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up JDK 21  # Обновлено до актуальной версии для Gradle 9.x
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-        cache: 'gradle' # Автоматически кеширует зависимости, ускоряя сборку
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
     - name: Build Release APK
       run: ./gradlew assembleRelease
+
+    # --- ДОБАВЬ ЭТОТ БЛОК ---
+    - name: Sign APK
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/build/outputs/apk/release
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
+    # ------------------------
+
     - name: Upload Release APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: app-release-apk
-        path: app/build/outputs/apk/release/*.apk
-
-
+        # ИЗМЕНИ ПУТЬ ТУТ, чтобы загружался именно ПОДПИСАННЫЙ файл
+        path: ${{ steps.sign_app.outputs.signedReleaseFile }}
