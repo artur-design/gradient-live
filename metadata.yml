@@ -1,0 +1,23 @@
+Categories: [Graphics, Wallpaper, Animation]
+License: MIT
+SourceCode: https://github.com/artur-design/gradient-live
+IssueTracker: https://github.com/artur-design/gradient-live/issues
+WebSite: https://github.com/artur-design/gradient-live
+Summary: Анимированные градиентные живые обои с большим количеством настроек
+Description: |
+  Живые обои представляют собой плавно меняющийся градиент.
+  Пользователь может настраивать:
+  • Частоту кадров
+  • Количество кадров
+  • Коэффициент длины градиента
+  • Направление движения
+  • Правила генерации цвета
+  
+  Для экономии батареи есть:
+  • Черные обои
+  • Остановку, если обои перекрываются другими приложениями
+
+  Приложение также содержит примеры для правил генерации цвета.
+Build: |
+  ./gradlew assembleRelease
+ 
