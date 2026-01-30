@@ -1,2 +1,2 @@
 # keystore – не отслеживаем
-app/keystore/*.jks
+/app/keystore/*.jks
