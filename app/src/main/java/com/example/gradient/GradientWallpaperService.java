@@ -46,7 +46,7 @@ private int targetColor3 = Color.BLACK;
         private int h, s, v, r, g, b;
         private String sr, sg, sb, sh, ss, sv, type, md;
         private boolean black, visibleMode;
-        private float transitionProgress = 0.0f;
+        private float transitionProgress = 1.0f;
         private final Handler handler = new Handler();
         private final Random random = new Random();
         private float transitionStep, gradientLengthCoefficient;
