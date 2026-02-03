@@ -32,6 +32,11 @@
         android:key="colorGenerationRuless"
         android:title="@string/color_generation"
         android:summary="@string/set_color_gen" />
+
+    <Preference
+        android:key="startColor"
+        android:title="@string/start_color"
+        android:summary="@string/set_start_color" />
 </PreferenceCategory>
     <PreferenceCategory android:title="@string/battery">
     <CheckBoxPreference
