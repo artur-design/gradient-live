@@ -89,8 +89,8 @@ boolean isRandomStart = "start_random".equals(
         prefs.getString("startGradient", "start_random"));
 
 if(start && isRandomStart) {
-targetColor1 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
-targetColor2 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256)); 
+targetColor2 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+targetColor3 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256)); 
 } 
 			frameCount = Integer.parseInt(prefs.getString("frameCount", "100"));
 			transitionStep = 1.00000f / frameCount;
@@ -241,13 +241,7 @@ transitionProgress += transitionStep;
                         return;
                     }
                     paint.setShader(gradient);
-				Paint textPaint = new Paint();
-				textPaint.setColor(Color.WHITE);
-				textPaint.setTextSize(48f);
-				textPaint.setAntiAlias(true);
                     canvas.drawRect(0, 0, width, height, paint);
-				String text = String.format("#%08X", targetColor1) + " " + String.format("#%08X", targetColor2) + " " + String.format("#%08X", targetColor3);
-				canvas.drawText(text, 20f, 500f, textPaint);
             	} finally {
             		if (canvas != null) surface.unlockCanvasAndPost(canvas);
         		}
