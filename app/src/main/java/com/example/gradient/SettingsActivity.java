@@ -204,9 +204,7 @@ ListPreference startGradient = (ListPreference) findPreference("startGradient");
          new Preference.OnPreferenceChangeListener() {
          @Override
          public boolean onPreferenceChange(Preference preference, Object newValue) {
-                                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getActivity()).edit();
-             boolean isRandomStart = "start_random".equals(newValue);
- editor.putBoolean("startGradient", isRandomStart);
+             editor.putString("startGradient", (String) newValue);
              editor.apply();
              return true;
              }
