@@ -54,7 +54,7 @@ private int targetColor3 = Color.BLACK;
 		
         public GradientWallpaperEngine(Context context) {
             this.context = context.getApplicationContext(); 
-            updatePreferences();
+            updatePreferences(true);
 
 setTouchEventsEnabled(true);
 
@@ -83,8 +83,12 @@ setTouchEventsEnabled(true);
         gestureDetector.onTouchEvent(event);
     }
 
-        public void updatePreferences() {
+        public void updatePreferences(boolean start) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+if(start) {
+targetColor1 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+targetColor2 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256)); 
+} 
 			frameCount = Integer.parseInt(prefs.getString("frameCount", "100"));
 			transitionStep = 1.00000f / frameCount;
 			md = prefs.getString("movementDirection", "↘");
@@ -120,14 +124,14 @@ stopPreview();
         new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                updatePreferences();
+                updatePreferences(false);
             }
         };
 
 		@Override
 		public void onSurfaceCreated(SurfaceHolder holder) {
     		super.onSurfaceCreated(holder);
-    		updatePreferences();
+    		updatePreferences(false);
 currentSurface = holder.getSurface();
     		startPreview(currentSurface); //передаем Surface
 		}
