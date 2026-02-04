@@ -41,7 +41,6 @@ android:summary="@string/set_start_gradient"
         android:entries="@array/start_gradient_entries"
         android:entryValues="@array/start_gradient_values"
         android:defaultValue="start_random"/>
-</PreferenceCategory>
 
 </PreferenceCategory>
     <PreferenceCategory android:title="@string/battery">
