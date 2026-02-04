@@ -426,24 +426,6 @@ int mintColor = ContextCompat.getColor(requireContext(), R.color.colorMint);
     		}
 		}
 
-                public void showStartColorDialog() {
-    // Создаем экземпляр LayoutInflater
-                    LayoutInflater inflater = getActivity().getLayoutInflater();
-                    View dialogView = inflater.inflate(R.layout.start_color_dialog, null);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setView(dialogView);
-builder.setTitle(getString(R.string.set_start_color))
-
-	.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
-    			@Override
-    			public void onClick(DialogInterface dialog, int which) {
-      				dialog.dismiss();
-    			}
-  			});
-
-final AlertDialog dialog = builder.create();
-    		dialog.show();
-} 
 
     	private void showHowToUseDialog() {
 TextView tv = new TextView(getActivity());
