@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="start_gradient_entries">
+        <item>@string/start_random</item>
+        <item>@string/start_black</item>
+    </string-array>
+
+    <string-array name="start_gradient_values">
+        <item>start_random</item>
+        <item>start_black</item>
+    </string-array>
+</resources>
