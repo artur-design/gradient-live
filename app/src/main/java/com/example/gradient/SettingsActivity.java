@@ -199,6 +199,18 @@ Preference examplesPreference = findPreference("examples");
     			}
 			});
 
+ListPreference startGradient = findPreference("startGradient");
+            startGradient.setOnPreferenceChangeListener(
+         new Preference.OnPreferenceChangeListener() {
+         @Override
+         public boolean onPreferenceChange(Preference preference, Object newValue) {
+             boolean isRandomStart = "start_random".equals(newValue);
+ editor.putBoolean("startGradient", isRandomStart);
+             editor.apply();
+             return true;
+             }
+         });
+
     	}
 
 		private void showDirectionDialog() {
