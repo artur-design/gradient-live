@@ -41,8 +41,10 @@
 <string name="examples">Примеры</string>
 <string name="some_examples">Некоторые примеры для генерации цвета</string>
 <string name="list_example">1. h = h + 1\n Итог: h каждый раз увеличивается на 1, и при достижении 255 сбрасывается на ноль. Аналогично с формулой h = h - 1\n\n 2. h = random(min, max)\n Итог: h будет принимать случайное значение от min до max (подставить вместо них число или переменную). Подказка: random(max) = random (0, max), random() = random(0, 255). \n\n 3. Задача: нужно значение h = 50, затем 100, потом снова 50.\n Решение: вначале ставим h = 50 или h = 100, потом вычисляем:50 + 100 = 150, затем ставим h = 150 - h\n\n Это лишь некоторые примеры, можно сделать формулы более интересными и непредсказуемыми.</string>
-<string name="start_color">Начальный цвет</string>
-<string name="set_start_color">Назначить начальный цвет</string>
+<string name="start_gradient">Начальный градиент</string>
+<string name="set_start_gradient">Назначить начальный градиент</string>
+<string name="start_random">Случайный</string>
+<string name="start_black">Чёрный</string>
     <string-array name="refresh_rate_entries" />
     <string-array name="refresh_rate_values" />
 
