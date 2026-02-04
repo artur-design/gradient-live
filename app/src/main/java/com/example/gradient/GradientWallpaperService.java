@@ -85,7 +85,8 @@ setTouchEventsEnabled(true);
 
         public void updatePreferences(boolean start) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-if(start) {
+boolean startGradient = prefs.getBoolean("startGradient", true);
+if(start && startGradient) {
 targetColor1 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 targetColor2 = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256)); 
 } 
