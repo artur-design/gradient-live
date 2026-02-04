@@ -199,14 +199,6 @@ Preference examplesPreference = findPreference("examples");
     			}
 			});
 
-Preference startColor = findPreference("startColor");
-			startColor.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-    			@Override
-    			public boolean onPreferenceClick(Preference preference) {
-        			showStartColorDialog();
-        			return true;
-    			}
-			});
     	}
 
 		private void showDirectionDialog() {
