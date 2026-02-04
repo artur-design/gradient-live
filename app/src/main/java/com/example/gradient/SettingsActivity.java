@@ -199,11 +199,12 @@ Preference examplesPreference = findPreference("examples");
     			}
 			});
 
-ListPreference startGradient = findPreference("startGradient");
+ListPreference startGradient = (ListPreference) findPreference("startGradient");
             startGradient.setOnPreferenceChangeListener(
          new Preference.OnPreferenceChangeListener() {
          @Override
          public boolean onPreferenceChange(Preference preference, Object newValue) {
+                                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getActivity()).edit();
              boolean isRandomStart = "start_random".equals(newValue);
  editor.putBoolean("startGradient", isRandomStart);
              editor.apply();
