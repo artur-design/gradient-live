@@ -33,10 +33,16 @@
         android:title="@string/color_generation"
         android:summary="@string/set_color_gen" />
 
-    <Preference
-        android:key="startColor"
-        android:title="@string/start_color"
-        android:summary="@string/set_start_color" />
+    <ListPreference
+        android:key="startGradient"
+        android:title="@string/start_gradient"
+android:summary="@string/set_start_gradient"
+        android:dialogTitle="@string/start_gradient"
+        android:entries="@array/start_gradient_entries"
+        android:entryValues="@array/start_gradient_values"
+        android:defaultValue="start_random"/>
+</PreferenceCategory>
+
 </PreferenceCategory>
     <PreferenceCategory android:title="@string/battery">
     <CheckBoxPreference
