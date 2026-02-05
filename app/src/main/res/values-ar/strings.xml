@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Gradient live</string>
-    <string name="wallpaper_description">خلفية حية متدرجة</string>
-    <string name="wallpaper_name">gradient live</string>
-
     <string name="err1">"القيمة الدنيا لا يمكن أن تكون أكبر من القيمة العليا."</string>
     <string name="refresh_rate">"معدل التحديث"</string>
     <string name="current_rate">"المعدل الحالي: "</string>
@@ -51,8 +47,5 @@
     <string name="set_start_gradient">تعيين التدرج الابتدائي</string>
     <string name="start_random">عشوائي</string>
     <string name="start_black">أسود</string>
-
-    <string-array name="refresh_rate_entries" />
-    <string-array name="refresh_rate_values" />
 
 </resources>
