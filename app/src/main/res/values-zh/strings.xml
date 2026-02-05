@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="err1">"最小值不能大于最大值。"</string>
     <string name="refresh_rate">"刷新频率"</string>
     <string name="current_rate">"当前频率："</string>
@@ -14,10 +15,12 @@
     <string name="save">保存</string>
     <string name="cancel">取消</string>
     <string name="def">默认</string>
-    <string name="err5">"在 RGB 模式下不允许使用变量 h、s、v。"</string>
+    <string name="err5">"在 RGB 模式下不允许使用 h、s、v 变量。"</string>
     <string name="error">错误</string>
-    <string name="err6">"在 HSV 模式下不允许使用变量 r、g、b。"</string>
-    <string name="about">"Gradient live – 动态渐变壁纸。双击壁纸可打开设置。应用提供以下选项：\n\n1. 刷新频率。可选择帧率，最高受手机屏幕刷新率限制。\n\n2. 帧数。输入渐变的帧数（最低 30），影响运动速度和流畅度。\n\n3. 渐变长度系数。通过输入 1 到 5 的整数或小数来设定渐变在屏幕上的长度，影响速度和锐度。\n\n4. 运动方向。选择渐变的移动方向。若选择“中心”，则没有渐变，整个屏幕显示单一颜色，并随设置平滑变化。\n\n5. 颜色生成规则用于定义下一个颜色的生成方式。可用变量：r、g、b、h、s、v、random()、random(max)、random(min, max)；数字（含小数）；运算符：‘+’、‘-’、‘*’、‘/’、‘%’；以及括号‘(’和‘)’。若表达式包含其他内容或首次执行即失败，则不会保存；若后续执行失败，函数返回 0。\n\n6. 为节省电池，可启用黑色壁纸或在壁纸被其他应用遮挡时暂停。\n\nhttps://github.com/artur-design/gradient-live"</string>
+    <string name="err6">"在 HSV 模式下不允许使用 r、g、b 变量。"</string>
+
+    <string name="about">"Gradient live 是一款实时渐变壁纸。双击壁纸可打开设置。应用提供以下功能：\n\n1. 刷新频率 – 选择帧率，最高可达手机屏幕的刷新率。\n\n2. 帧数 – 设置渐变的帧数，最低 30，影响速度和流畅度。\n\n3. 渐变长度系数 – 以屏幕数为单位选择渐变长度（整数或小数，范围 1‑5），影响速度和锐度。\n\n4. 运动方向 – 选择渐变的移动方向。若选择“中心”，则没有渐变，整个屏幕会根据设置平滑变色。\n\n5. 颜色生成规则 – 定义下一颜色的生成方式。可用变量：r、g、b、h、s、v、random()、random(max)、random(min, max)；数字（含小数）；运算符：‘+’、‘-’、‘*’、‘/’、‘%’；以及括号‘(’和‘)’。其他字符会被拒绝。若表达式首次无法计算则不保存；若后续计算失败，函数返回 0。\n\n6. 初始渐变 – 可选择随机渐变或黑屏。\n\n7. 节能模式 – 当壁纸被其他应用遮挡时，可启用黑色壁纸或暂停。\n\nhttps://github.com/artur-design/gradient-live"</string>
+
     <string name="ok">确定</string>
     <string name="how_use">使用方法</string>
     <string name="hz"> Hz</string>
@@ -30,12 +33,19 @@
     <string name="movement_direction">运动方向</string>
     <string name="color_generation">颜色生成规则</string>
     <string name="set_color_gen">设置颜色生成规则</string>
-    <string name="battery">省电模式</string>
+    <string name="battery">节能模式</string>
     <string name="black">黑色壁纸</string>
     <string name="set_black">启用黑色壁纸</string>
     <string name="visible">隐藏时暂停</string>
-    <string name="set_visible">启用以省电</string>
+    <string name="set_visible">启用以节省电池</string>
+
     <string name="examples">示例</string>
     <string name="some_examples">颜色生成的一些示例</string>
-    <string name="list_example">1. h = h + 1\n结果：h 每次增加 1，达到 255 后重置为 0。h = h - 1 同理。\n\n2. h = random(min, max)\n结果：h 在 min 与 max 之间取随机值（用数字或变量替代 min、max）。提示：random(max) = random(0, max)，random() = random(0, 255)。\n\n3. 任务：需要先得到 h = 50，然后 100，最后再回到 50。\n解决方案：先设 h = 50 或 h = 100，然后计算：50 + 100 = 150，再设 h = 150 - h。\n\n这些仅是示例，您可以编写更复杂且不可预测的公式。</string>
+    <string name="list_example">1. h = h + 1\n结果：h 每次增加 1，达到 255 后重置为 0。h = h - 1 同理。\n\n2. h = random(min, max)\n结果：h 在 min 与 max 之间取随机值（用数字或变量替代）。注意：random(max) = random(0, max)，random() = random(0, 255)。\n\n3. 目标：h = 50，然后 100，再回到 50。\n解决方案：先设 h = 50 或 h = 100，然后计算：50 + 100 = 150，再设 h = 150 - h。\n\n这些仅是示例，你可以编写更复杂且不可预测的公式。"</string>
+
+    <string name="start_gradient">初始渐变</string>
+    <string name="set_start_gradient">设置初始渐变</string>
+    <string name="start_random">随机</string>
+    <string name="start_black">黑色</string>
+
 </resources>
