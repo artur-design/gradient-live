@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Gradient live</string>
-    <string name="wallpaper_description">Live‑Wallpaper‑Gradient</string>
-    <string name="wallpaper_name">gradient live</string>
-
     <string name="err1">"Minimalwert darf nicht größer als Maximalwert sein."</string>
     <string name="refresh_rate">"Aktualisierungsrate"</string>
     <string name="current_rate">"Aktuelle Rate: "</string>
@@ -51,8 +47,5 @@
     <string name="set_start_gradient">Start‑Gradient festlegen</string>
     <string name="start_random">Zufällig</string>
     <string name="start_black">Schwarz</string>
-
-    <string-array name="refresh_rate_entries" />
-    <string-array name="refresh_rate_values" />
 
 </resources>
