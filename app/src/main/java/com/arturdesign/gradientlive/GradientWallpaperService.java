@@ -1,6 +1,6 @@
 
 
-package com.example.gradient;
+package com.arturdesign.gradientlive;
 
 import android.content.Intent;
 import android.view.GestureDetector;
