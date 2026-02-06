@@ -1,4 +1,4 @@
-package com.example.gradient;
+package com.arturdesign.gradientlive;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ComponentName;
 import android.content.Intent;
