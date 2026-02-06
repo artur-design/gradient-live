@@ -5,23 +5,15 @@ android {
     buildToolsVersion "35.0.0"
 
     defaultConfig {
-        applicationId "com.example.gradient"
+        applicationId "com.arturdesign.gradientlive"
         minSdkVersion 21
         targetSdkVersion 35 // Оставьте на уровне 27
         versionCode 1
         versionName "1.0"
-        //vectorDrawables.useSupportLibrary = true
 
     }
 
-	namespace "com.example.gradient"
-
-   /* buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' // Оставьте файл ProGuard
-        }
-    }*/
+	namespace "com.arturdesign.gradientlive"
 
     aaptOptions {
         cruncherEnabled true          // включить PNG‑cruncher (по умолчанию включён)
