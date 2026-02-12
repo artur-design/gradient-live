@@ -1,1 +1,16 @@
+Gradient Live est un fond d'écran animé avec de nombreux réglages.
 
+Les paramètres de dégradé suivants sont disponibles :
+• Taux de rafraîchissement
+• Nombre d'images
+• Coefficient de longueur du dégradé
+• Direction du mouvement
+• Règles de génération de couleurs
+• Dégradé de départ
+
+Pour économiser la batterie, il y a :
+• Fond d'écran noir
+• Pause si le fond est couvert par d'autres applications
+
+Attention : appuyer deux fois sur le fond d'écran ouvre les réglages.
+L'app comprend une description et des exemples de génération.
