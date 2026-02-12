@@ -1,1 +1,17 @@
 
+Gradient Live ist ein Live-Hintergrund mit vielen Einstellungen.
+
+Folgende Einstellungen für den Farbverlauf sind verfügbar:
+• Aktualisierungsrate
+• Anzahl der Frames
+• Koeffizient der Verlaufslänge
+• Bewegungsrichtung
+• Regeln für die Farberzeugung
+• Start-Farbverlauf
+
+Um Akku zu sparen, gibt es:
+• Schwarzes Hintergrundbild
+• Pause, wenn das Hintergrundbild von Apps verdeckt wird
+
+Achtung: Doppeltippen auf das Hintergrundbild öffnet die Einstellungen.
+Die App enthält Beschreibungen und Beispiele zur Farberzeugung.
