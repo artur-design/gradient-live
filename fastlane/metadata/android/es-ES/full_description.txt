@@ -1,1 +1,16 @@
+Gradient Live es un fondo de pantalla animado con muchos ajustes.
 
+Están disponibles los siguientes ajustes de degradado:
+• Tasa de refresco
+• Número de fotogramas
+• Coeficiente de longitud del degradado
+• Dirección del movimiento
+• Reglas de generación de color
+• Degradado inicial
+
+Para ahorrar batería dispone de:
+• Fondo de pantalla negro
+• Pausa si el fondo está cubierto por otras aplicaciones
+
+Atención: tocar dos veces el fondo de pantalla abre los ajustes.
+La aplicación incluye descripción y ejemplos para generar colores.
