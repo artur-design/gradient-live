@@ -1,5 +1,16 @@
-Живые обои представляют собой плавно меняющийся градиент.
-Пользователь может настраивать частоту кадров, количество кадров, коэффициент.
-длины градиента, направление движения и начальный градиент.
-Для экономии батареи есть черные обои и остановка анимации.
-Внимание: двойное нажатие открывает настройки.
+Gradient Live is a gradient live wallpaper with many settings.
+
+The following gradient settings are available:
+• Refresh rate
+• Number of frames
+• Gradient length coefficient
+• Direction of movement
+• Color generation rules
+• Starting gradient
+
+To save battery there are:
+• Black wallpaper
+• Pause if the wallpaper is covered by other apps
+
+Attention: double tap on the wallpaper opens the settings.
+The app includes a description and examples for color generation.
